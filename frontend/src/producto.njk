@@ -4,7 +4,6 @@ eleventyComputed:
     description: "{{ productos[0].descseo }}"
     keywords: "{{ productos[0].keyseo }}"
 layout: base.njk
-# gsap: producto.js
 pagination:
   data: collections.productos
   size: 1
@@ -12,7 +11,7 @@ pagination:
 permalink: "/productos/{{ producto.slug.current }}/"
 ---
 
-<div data-barba="container" data-barba-namespace="producto" data-css="producto" data-css="producto">
+<div data-barba="container" data-barba-namespace="producto" data-css="producto" data-js="producto">
 
   <section id="section__hero" class="pad__lr__5 pad__top__10">
     <div class="column__1 max1400">

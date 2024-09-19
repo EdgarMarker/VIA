@@ -35,7 +35,12 @@ module.exports = function (eleventyConfig) {
     return categoriasPosts;
   });
 
+  
 
+  // Filtro personalizado 'slice' para limitar el número de elementos
+  eleventyConfig.addFilter('slice', function(arr, limit) {
+    return arr.slice(0, limit);
+  });
 
 
 

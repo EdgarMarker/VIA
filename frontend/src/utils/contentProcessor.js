@@ -9,7 +9,7 @@ async function processContent(item) {
           url: item[key].media.url,
           alt: item[key].alt ? item[key].alt.altText : ''
         });
-      } else if (isPortableTextBlock(item[key])) {
+      }  else if (isPortableTextBlock(item[key])) {
         item[key] = renderBlocks(item[key]);
       } else {
         await processContent(item[key]);
@@ -19,16 +19,52 @@ async function processContent(item) {
 }
 
 function renderBlocks(blocks) {
-  return blocks.map(block => {
-    switch (block._type) {
-      case 'block':
-        return renderTextBlock(block);
-      case 'image':
-        return renderImageBlock(block);
-      default:
-        return `<div>Unrecognized block type: ${block._type}</div>`;
+  let html = '';
+  let listOpen = false; // Para saber si una lista está abierta
+  let currentListTag = ''; // Para saber si es una lista desordenada o ordenada
+
+  blocks.forEach(block => {
+    if (block._type === 'block') {
+      if (block.listItem) {
+        // Si el bloque es parte de una lista
+        let listTag = block.listItem === 'bullet' ? 'ul' : 'ol';
+
+        if (!listOpen || currentListTag !== listTag) {
+          // Si no hay lista abierta o el tipo de lista cambió, cerramos la anterior y abrimos una nueva
+          if (listOpen) {
+            html += `</${currentListTag}>`; // Cerrar lista anterior
+          }
+          currentListTag = listTag;
+          html += `<${listTag}>`; // Abrir nueva lista
+          listOpen = true;
+        }
+
+        // Añadir elemento de la lista
+        html += `<li>${block.children.map(renderChild).join('')}</li>`;
+      } else {
+        // Si la lista estaba abierta, cerrarla antes de continuar con bloques normales
+        if (listOpen) {
+          html += `</${currentListTag}>`;
+          listOpen = false;
+          currentListTag = '';
+        }
+
+        // Procesar bloques normales
+        html += renderTextBlock(block);
+      }
+    } else if (block._type === 'image') {
+      html += renderImageBlock(block);
+    } else {
+      html += `<div>Unrecognized block type: ${block._type}</div>`;
     }
-  }).join('');
+  });
+
+  // Cerrar la lista si está abierta al final
+  if (listOpen) {
+    html += `</${currentListTag}>`;
+  }
+
+  return html;
 }
 
 function renderTextBlock(block) {

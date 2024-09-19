@@ -8,10 +8,10 @@ pagination:
   data: collections.uniqueCategories
   size: 1
   alias: categoriaPost
-permalink: "/articulos/categorias/{{ categoriaPost.slug }}/index.html"
+permalink: "/articulos/categorias/{{ categoriaPost.slug.current }}/index.html"
 ---
 
-<div data-barba="container" data-barba-namespace="categoria-articulo" data-css="articulos">
+<div data-barba="container" data-barba-namespace="categoria-articulo" data-css="articulos" data-js="articulos">
 
 
   <section id="section__hero" class="pad__all__5">

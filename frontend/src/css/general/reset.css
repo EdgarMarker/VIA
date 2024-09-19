@@ -153,7 +153,6 @@ h6,
 p,
 span,
 a,
-strong,
 blockquote,
 i,
 b,
@@ -165,6 +164,10 @@ em {
     text-decoration: none;
     color: inherit;
     display: inline-block;
+}
+
+strong{
+    font-weight: 600;
 }
 
 blockquote:before,

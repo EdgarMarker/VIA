@@ -6,19 +6,21 @@
         </div>
         <div class="footer__column">
             <h2>Datos de contacto</h2>
-            {% for item in empresa %}
+            <ul>
+                {% for item in empresa %}
                 <li>T: <a class="tel__text" href="tel:+521{{ item.brandPhone }}">{{ item.brandPhone }}</a></li>
                 <li>C: <a href="mailto:{{ item.brandEmail }}">{{ item.brandEmail }}</a></li>
                 <li><a href="{{ item.brandAddressUrl }}" target="_blank">{{ item.brandAddress }}</a></li>
-            {% endfor %}
+                {% endfor %}
+            </ul>
         </div>
         <div class="footer__column">
             <h2>Síguenos</h2>
             <ul>
-            {% for item in social %}
+                {% for item in social %}
                 <li><a href="{{ item.facebook }}" target="_blank">Facebook</a></li>
                 <li><a href="{{ item.instagram }}" target="_blank">Instagram</a></li>
-            {% endfor %}
+                {% endfor %}
             </ul>
         </div>
         <div class="footer__column">
