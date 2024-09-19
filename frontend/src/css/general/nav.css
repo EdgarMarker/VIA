@@ -1,5 +1,5 @@
 header{
-    background-color: var(--color-primary-light);
+    background-color: var(--color-secondary);
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@ header{
 }
 
 .nav__ul li a{
-    color: var(--color-secondary);
+    color: var(--color-white);
     font-size: 15px;
     text-transform: uppercase;
     line-height: 1;
@@ -50,11 +50,11 @@ header{
 }
 
 .nav__ul li a:hover{
-    color: var(--color-secondary)
+    color: var(--color-accent)
 }
 
 #inner__header .nav__ul li a.active{
-    color: var(--color-secondary);
+    color: var(--color-accent);
     pointer-events: none;
 }
 
@@ -63,7 +63,7 @@ header{
     position: absolute;
     width: calc(100% - 40px);
     height: 3px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     bottom: 0;
     left: 20px;
     display: none;
@@ -126,7 +126,7 @@ header{
 #mobile__trigger span{
     width: 26px;
     height: 2px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     display: block;
     position: absolute;
     top: 15px;
@@ -152,17 +152,14 @@ header{
 
 #mobile__trigger.active span:nth-child(1){
     transform: rotate(45deg);
-    background-color: var(--color-accent);
     left: 17px;
 }
 
 #mobile__trigger.active span:nth-child(2){
-    background-color: var(--color-accent);
     opacity: 0;
 }
 
 #mobile__trigger.active span:nth-child(3){
-    background-color: var(--color-accent);
     transform: rotate(-45deg);
     left: 17px;
 }

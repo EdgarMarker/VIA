@@ -1,7 +1,6 @@
 footer{
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     padding: 5% 5% 50px;
-    background-image: url(/images/bg_yellow.svg);
 }
 
 .footer__column{
@@ -13,13 +12,13 @@ footer{
 }
 
 .footer__column h2{
-    color: var(--color-secondary);
+    color: var(--color-accent);
     font-size: var(--size-xs);
     text-transform: uppercase;
 }
 
 .footer__column a{
-    color: var(--color-secondary);
+    color: var(--color-white);
     font-size: var(--size-xs);
     padding: 0;
     text-transform: unset;
@@ -40,7 +39,7 @@ footer{
 }
 
 .footer__column li{
-    color: var(--color-secondary);
+    color: var(--color-accent);
     font-size: var(--size-xs);
     margin-bottom: 0px;
     padding: 10px 0px;
@@ -54,7 +53,7 @@ footer{
 }
 
 .footer__column li a{
-    color: var(--color-secondary);
+    color: var(--color-white);
     font-size: var(--size-xs);
     line-height: 1.6;
     text-transform: unset;
@@ -64,9 +63,8 @@ footer{
 }
 
 .footer__column li a.active{
-    color: var(--color-secondary);
+    color: var(--color-accent);
     pointer-events: none;
-    font-weight: 500;
 }
 
 .tel__text > div:nth-child(3), .tel__text > div:nth-child(6){
@@ -88,12 +86,12 @@ footer{
 }
 
 #inner__footer span{
-    color: var(--color-secondary);
+    color: var(--color-white);
     font-size: 14px;
 }
 
 #inner__footer a{
-    color: var(--color-secondary);
+    color: var(--color-accent);
     font-size: 14px;
 }
 
