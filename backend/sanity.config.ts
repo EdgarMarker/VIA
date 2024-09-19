@@ -5,9 +5,9 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'web_base',
+  title: 'backend',
 
-  projectId: '9jaltgzm',
+  projectId: 'pexqs3o3',
   dataset: 'production',
 
   plugins: [
