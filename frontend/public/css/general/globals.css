@@ -1,5 +1,5 @@
 body{
-    font-family: var(--font-primary);
+    font-family: var(--font-primary);   
     background-color: var(--color-white);
     color: var(--color-secondary);
     min-height: 100dvh;

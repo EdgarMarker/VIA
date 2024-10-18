@@ -1,7 +1,7 @@
-const client = require('../utils/sanityClient');
-const processContent = require('../utils/contentProcessor');
+const client = require("../utils/sanityClient");
+const processContent = require("../utils/contentProcessor");
 
-module.exports = async function() {
+module.exports = async function () {
   const data = await client.fetch(`*[_type == "inicio"]{
     titleseo,
     descseo,
@@ -33,6 +33,13 @@ module.exports = async function() {
     introImg2{
       "media": asset->{url},
       "alt": asset->{altText}
+    },
+    aboutViaH2,
+    aboutViaRichText1,
+    aboutViaRichText2,
+    aboutViaDeadNumbers[]{
+      number,
+      text
     },
     recentProdRef{
       "recentProducts": recentProducts[]->{

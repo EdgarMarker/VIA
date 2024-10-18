@@ -42,40 +42,160 @@
         </a>
 
         <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
     
-        <li>
-            <a href="/" class="" >
-                Inicio
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/ubicaciones/"
+      class=""
+    >
+      Ubicaciones
+    </a>
     
-        <li>
-            <a href="/productos/" class="" >
-                Productos
-            </a>
-        </li>
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
     
-        <li>
-            <a href="/nosotros/" class="" >
-                Nosotros
-            </a>
-        </li>
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/construccion"
+          class=""
+        >
+          Construcción
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
     
-        <li>
-            <a href="/articulos/1/" class="" >
-                Blog
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
     
-        <li>
-            <a href="/contacto/" class="" >
-                Contacto
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/blog/"
+      class=""
+    >
+      Blog
+    </a>
     
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class=""
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
 </ul>
 
-        <a class="cta__msn" href="https://wa.me/521" target="_blank">Mensaje</a>
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+
+        <a class="cta__msn" href="https://wa.me/521" target="_blank">Agendar Llamada</a>
         
         <div id="mobile__trigger">
             <span></span>
@@ -86,39 +206,159 @@
     
     <div id="mobile__menu">
         <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
     
-        <li>
-            <a href="/" class="" >
-                Inicio
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/ubicaciones/"
+      class=""
+    >
+      Ubicaciones
+    </a>
     
-        <li>
-            <a href="/productos/" class="" >
-                Productos
-            </a>
-        </li>
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
     
-        <li>
-            <a href="/nosotros/" class="" >
-                Nosotros
-            </a>
-        </li>
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/construccion"
+          class=""
+        >
+          Construcción
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
     
-        <li>
-            <a href="/articulos/1/" class="" >
-                Blog
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
     
-        <li>
-            <a href="/contacto/" class="" >
-                Contacto
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/blog/"
+      class=""
+    >
+      Blog
+    </a>
     
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class=""
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
 </ul>
-        <a class="cta__msn" href="https://wa.me/521" target="_blank">Mensaje</a>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+        <a class="cta__msn" href="https://wa.me/521" target="_blank">Agendar Llamada</a>
     </div>
     <div id="mobile__active"></div>
     
@@ -155,38 +395,158 @@
         <div class="footer__column">
             <h2>Mapa del sitio</h2>
             <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
     
-        <li>
-            <a href="/" class="" >
-                Inicio
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/ubicaciones/"
+      class=""
+    >
+      Ubicaciones
+    </a>
     
-        <li>
-            <a href="/productos/" class="" >
-                Productos
-            </a>
-        </li>
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
     
-        <li>
-            <a href="/nosotros/" class="" >
-                Nosotros
-            </a>
-        </li>
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/construccion"
+          class=""
+        >
+          Construcción
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
     
-        <li>
-            <a href="/articulos/1/" class="" >
-                Blog
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
     
-        <li>
-            <a href="/contacto/" class="" >
-                Contacto
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/blog/"
+      class=""
+    >
+      Blog
+    </a>
     
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class=""
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
 </ul>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
         </div>
         <div class="footer__column">
             <h2>Datos de contacto</h2>
@@ -221,6 +581,19 @@
             © Todos los derechos reservados | Sitio web creado por <a href="https://marker.com.mx" target="_blank">MARKER branding</a></span>
     </div>
 </footer>
+<style>
+    .footer__column:first-child {
+        .nav__ul{
+            border: none;
+        }
+        .dropdown-list{
+            display: none;
+        }
+        .dropdown::after {
+            display: none;
+        }
+    }
+</style>
         </div>
     </div>
 

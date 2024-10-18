@@ -1,9 +1,93 @@
 <ul role="list" class="nav__ul">
-    {% for item in menu %}
-        <li>
-            <a href="{{ item.url }}" class="{% if page.url == item.url %}active{% endif %}" >
-                {{ item.name }}
-            </a>
-        </li>
-    {% endfor %}
+  {% for item in menu %}
+  <li class="{% if item.name == 'Desarrollos' %}dropdown{% endif %}">
+    <a
+      href="{{ item.url }}"
+      class="{% if page.url == item.url %}active{% endif %}"
+    >
+      {{ item.name }}
+    </a>
+    {% if item.list %}
+    <ul class="dropdown-list">
+      {% for subitem in item.list %}
+      <li>
+        <a
+          href="{{ subitem.url }}"
+          class="{% if page.url == subitem.url %}active{% endif %}"
+        >
+          {{ subitem.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+  {% endfor %}
 </ul>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
