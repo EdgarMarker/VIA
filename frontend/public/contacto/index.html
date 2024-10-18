@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Base | Este es el título de contacto que se verá en Google</title>
-    <meta name="description" content="Esta es la descripción de la sección contacto que se publicará en Google, agregar datos relevantes">
-    <meta name="keywords" content="ejemplo, contacto, empresa">
-    <meta name="author" content="Web Base">
+    <title> | </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
     
     <meta property=”og:type” content="website" />
-    <meta property=”og:title” content="Este es el título de contacto que se verá en Google" />
-    <meta property=”og:description” content="Esta es la descripción de la sección contacto que se publicará en Google, agregar datos relevantes" />
+    <meta property=”og:title” content="" />
+    <meta property=”og:description” content="" />
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/general/reset.css">
     <link rel="stylesheet" href="/css/general/globals.css">
     <link rel="stylesheet" href="/css/general/nav.css">
     <link rel="stylesheet" href="/css/general/footer.css">
-    
-    
-    
     
     
     
@@ -41,44 +38,164 @@
     
     <div id="inner__header">
         <a id="logo__main" href="/">
-            <img src="https://cdn.sanity.io/images/9jaltgzm/production/216c319bb11c0d60e504087a9294443eb177f7bd-220x35.svg" alt="Web Base - Tecnología y gadgets" />
+            <img src="https://cdn.sanity.io/images/69w89h1k/production/b71a393d54467badef7d0fb88722cc55c1d1b243-164x67.svg" alt=" - " />
         </a>
 
         <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
     
-        <li>
-            <a href="/" class="" >
-                Inicio
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/ubicaciones/"
+      class=""
+    >
+      Ubicaciones
+    </a>
     
-        <li>
-            <a href="/productos/" class="" >
-                Productos
-            </a>
-        </li>
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
     
-        <li>
-            <a href="/nosotros/" class="" >
-                Nosotros
-            </a>
-        </li>
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/construccion"
+          class=""
+        >
+          Construcción
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
     
-        <li>
-            <a href="/articulos/1/" class="" >
-                Blog
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
     
-        <li>
-            <a href="/contacto/" class="active" >
-                Contacto
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/blog/"
+      class=""
+    >
+      Blog
+    </a>
     
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class="active"
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
 </ul>
 
-        <a class="cta__msn" href="https://wa.me/5219990000000" target="_blank">Mensaje</a>
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+
+        <a class="cta__msn" href="https://wa.me/521" target="_blank">Agendar Llamada</a>
         
         <div id="mobile__trigger">
             <span></span>
@@ -89,39 +206,159 @@
     
     <div id="mobile__menu">
         <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
     
-        <li>
-            <a href="/" class="" >
-                Inicio
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/ubicaciones/"
+      class=""
+    >
+      Ubicaciones
+    </a>
     
-        <li>
-            <a href="/productos/" class="" >
-                Productos
-            </a>
-        </li>
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
     
-        <li>
-            <a href="/nosotros/" class="" >
-                Nosotros
-            </a>
-        </li>
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/construccion"
+          class=""
+        >
+          Construcción
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
     
-        <li>
-            <a href="/articulos/1/" class="" >
-                Blog
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
     
-        <li>
-            <a href="/contacto/" class="active" >
-                Contacto
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/blog/"
+      class=""
+    >
+      Blog
+    </a>
     
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class="active"
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
 </ul>
-        <a class="cta__msn" href="https://wa.me/5219990000000" target="_blank">Mensaje</a>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+        <a class="cta__msn" href="https://wa.me/521" target="_blank">Agendar Llamada</a>
     </div>
     <div id="mobile__active"></div>
     
@@ -132,73 +369,6 @@
                 
 <div data-barba="container" data-barba-namespace="contacto" data-css="contacto" data-js="contacto">
 
-
-    <section id="section__hero" class="pad__lr__5">
-        <div class="column__2">
-            <div class="col__left flex__justify__c pad__right__5 width__45">            
-                <h1>Este es el título descriptivo para contacto</h1>
-                <div><h2>Este es el <strong>título principal</strong> para  la sección de contacto.</h2></div>
-                <p>Este es un párrafo descriptivo para el apartado de contacto</p>
-                <a class="btn btn__hero">Contacta con nosotros</a>
-            </div>
-            <div class="col__right width__55">
-                
-                <picture>
-                    
-                    <source srcset="/images/puISv7QFyk-300.png 300w, /images/puISv7QFyk-600.png 600w, /images/puISv7QFyk-900.png 900w, /images/puISv7QFyk-1200.png 1200w" sizes="(max-width: 1200px) 100vw, 1200px" type="image/png">
-                    
-                    <source srcset="/images/puISv7QFyk-300.webp 300w, /images/puISv7QFyk-600.webp 600w, /images/puISv7QFyk-900.webp 900w, /images/puISv7QFyk-1200.webp 1200w" sizes="(max-width: 1200px) 100vw, 1200px" type="image/webp">
-                    
-                    <img src="" alt="">
-                </picture>
-                
-            </div>
-        </div>
-    </section>
-
-
-    <section id="section__intro" class="pad__all__5 fadeInOut">
-        <div class="column__2">
-            <div class="col__left">
-                <h3>Contáctanos</h3>
-                <h2>Estamos para ayudarte</h2>
-                <div><p>Queremos saber de ti, puedes contactarnos a través de nuestros datos de contacto o bien, llenando el formulario de la derecha para recibir asistencia de uno de nuestros expertos.</p></div>
-            </div>
-            <div class="col__right ">
-                <form action="/success.php" method="POST" autocomplete="on">
-                    <div>
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" autocomplete="on" required>
-                    </div>
-
-                    <div>
-                        <label for="phone">Teléfono:</label>
-                        <input type="tel" id="phone" name="phone" autocomplete="on" required>
-                    </div>
-                    
-                    <div>
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" autocomplete="on" required>
-                    </div>
-
-                    <div>
-                        <label for="subject">Asunto:</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    
-                    <div>
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    
-                    
-                    <button class="btn" type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-
 </div>
             </main>
             <footer>
@@ -206,46 +376,166 @@
         <div class="footer__column">
             <h2>Mapa del sitio</h2>
             <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
     
-        <li>
-            <a href="/" class="" >
-                Inicio
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/ubicaciones/"
+      class=""
+    >
+      Ubicaciones
+    </a>
     
-        <li>
-            <a href="/productos/" class="" >
-                Productos
-            </a>
-        </li>
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
     
-        <li>
-            <a href="/nosotros/" class="" >
-                Nosotros
-            </a>
-        </li>
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/construccion"
+          class=""
+        >
+          Construcción
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
     
-        <li>
-            <a href="/articulos/1/" class="" >
-                Blog
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
     
-        <li>
-            <a href="/contacto/" class="active" >
-                Contacto
-            </a>
-        </li>
+  </li>
+  
+  <li class="">
+    <a
+      href="/blog/"
+      class=""
+    >
+      Blog
+    </a>
     
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class="active"
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
 </ul>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
         </div>
         <div class="footer__column">
             <h2>Datos de contacto</h2>
             <ul>
                 
-                <li>T: <a class="tel__text" href="tel:+5219990000000">9990000000</a></li>
-                <li>C: <a href="mailto:contacto@webbase.mx">contacto@webbase.mx</a></li>
-                <li><a href="https://www.google.com/maps/place/MARKER+agencia+de+branding,+inbound+marketing+y+dise%C3%B1o/@21.03642,-89.5951133,17z/data=!3m1!4b1!4m6!3m5!1s0x8f5676fb796cacaf:0x10d6454e030169f4!8m2!3d21.03642!4d-89.5925384!16s%2Fg%2F11dxkvwjry?entry=ttu&amp;g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Calle 39A #198 entre 16B y 16E. Colonia Altabrisa. C.P. 97217. Mérida, Yucatán. México</a></li>
+                <li>T: <a class="tel__text" href="tel:+521"></a></li>
+                <li>C: <a href="mailto:"></a></li>
+                <li><a href="" target="_blank"></a></li>
                 
             </ul>
         </div>
@@ -253,30 +543,38 @@
             <h2>Síguenos</h2>
             <ul>
                 
-                <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-                
             </ul>
         </div>
         <div class="footer__column">
             
                 <a class="logo__footer" href="/">
-                    <img src="https://cdn.sanity.io/images/9jaltgzm/production/216c319bb11c0d60e504087a9294443eb177f7bd-220x35.svg" alt="Web Base - Tecnología y gadgets" />
+                    <img src="" alt=" - " />
                 </a>
             
-            
-                <a href="/aviso-de-privacidad">Aviso de privacidad</a>
             
         </div>
     </div>
     <div id="inner__footer" class="column__1">
         <span>
             
-                Web Base
+                
             
             © Todos los derechos reservados | Sitio web creado por <a href="https://marker.com.mx" target="_blank">MARKER branding</a></span>
     </div>
 </footer>
+<style>
+    .footer__column:first-child {
+        .nav__ul{
+            border: none;
+        }
+        .dropdown-list{
+            display: none;
+        }
+        .dropdown::after {
+            display: none;
+        }
+    }
+</style>
         </div>
     </div>
 

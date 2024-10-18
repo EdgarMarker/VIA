@@ -1,7 +1,15 @@
 [
     { "name": "Inicio", "url": "/" },
-    { "name": "Productos", "url": "/productos/" },
-    { "name": "Nosotros", "url": "/nosotros/" },
-    { "name": "Blog", "url": "/articulos/1/" },
+    { "name": "Ubicaciones", "url": "/ubicaciones/" },
+    { 
+        "name": "Desarrollos", 
+        "url": "/desarrollos/",
+        "list": [
+            { "name": "Construcción", "url": "/desarrollos/construccion" },
+            { "name": "Terminado" , "url": "/desarrollos/terminado" }
+        ]
+    },
+    { "name": "Invierte", "url": "/invierte/" },
+    { "name": "Blog", "url": "/blog/" },
     { "name": "Contacto", "url": "/contacto/" }
 ]
