@@ -20,6 +20,14 @@ export default {
       title: 'Sobre VIA',
     },
     {
+      name: 'ourMethod',
+      title: 'Nuestro método',
+    },
+    {
+      name: 'testy',
+      title: 'Testimonios',
+    },
+    {
       name: 'prod',
       title: 'Productos recientes',
     },
@@ -174,7 +182,102 @@ export default {
             },
           ],
         },
+        {
+          name: 'aboutViaImg',
+          title: 'Imagen',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        },
       ],
+    },
+    {
+      name: 'ourMethod',
+      title: 'Nuestro método',
+      type: 'object',
+      group: 'ourMethod',
+      fields: [
+        {
+          name: 'ourMethodSteps',
+          title: 'Pasos de nuestro método',
+          type: 'array',
+          of: [
+            {
+              name: '',
+              type: 'object',
+              fields: [
+                {
+                  name: 'title',
+                  title: 'Titulo',
+                  type: 'string',
+                },
+                {
+                  name: 'number',
+                  title: 'Paso',
+                  type: 'string',
+                },
+                {
+                  name: 'description',
+                  title: 'Descripción del paso',
+                  type: 'string',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: 'ourMethodH2',
+          title: 'Título principal',
+          type: 'string',
+        },
+        {
+          name: 'ourMethodRichText',
+          title: 'Descripción',
+          type: 'blockContent',
+        },
+        {
+          name: 'ourMethodImg',
+          title: 'Imagen',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        }
+      ]
+    },
+    {
+      name: 'testy',
+      title: 'Testimonios',
+      type: 'object',
+      group: 'testy',
+      fields: [
+        {
+          name: 'testyH2',
+          title: 'Título principal',
+          type: 'string',
+        },
+        {
+          name: 'testyList',
+          title: 'Lista de testimonios',
+          type: 'array',
+          of: [{
+            type: 'object',
+            fields: [
+              {
+                name: 'name',
+                title: 'Nombre y apellido',
+                type: 'string',
+              },
+              {
+                name: 'text',
+                title: 'Testimonio',
+                type: 'blockContent',
+              }
+            ]
+          }],
+        }
+      ]
     },
     {
       name: 'recentProdRef',

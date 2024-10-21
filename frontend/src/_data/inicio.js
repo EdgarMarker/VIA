@@ -34,12 +34,31 @@ module.exports = async function () {
       "media": asset->{url},
       "alt": asset->{altText}
     },
-    aboutViaH2,
-    aboutViaRichText1,
-    aboutViaRichText2,
-    aboutViaDeadNumbers[]{
-      number,
-      text
+    aboutVia{
+      aboutViaH2,
+      aboutViaRichText1,
+      aboutViaRichText2,
+      aboutViaDeadNumbers[]{
+        number,
+        text
+        },
+      aboutViaImg{
+        "media": asset->{url},
+        "alt": asset->{altText}
+      },
+    },
+    ourMethod{
+      ourMethodSteps[]{
+        title,
+        number,
+        description
+      },
+      ourMethodH2,
+      ourMethodRichText,
+      ourMethodImg{
+        "media": asset->{url},
+        "alt": asset->{altText}
+      },
     },
     recentProdRef{
       "recentProducts": recentProducts[]->{
