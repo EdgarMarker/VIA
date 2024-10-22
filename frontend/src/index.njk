@@ -170,12 +170,104 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
   </section>
 
-  <section id="home_testy">
+  <section id="home_testy" class="pad__lr__5 pad__tb__5">
     <h3>/Testimonios</h3>
     <div class="column__1">
-        <h2></h2>
-        
+      <h2>{{ item.testy.testyH2 }}</h2>
+      <div class="swiper testimonials-swiper max1200">
+        <div class="swiper-wrapper">
+          {% for list in item.testy.testyList %}
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="testy__card">
+              <div>{{ list.text | safe }}</div>
+              <h3>{{ list.name }}</h3>
+              <div class="stars-container">
+                <svg viewBox="0 0 24 24"">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24"">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24"">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24"">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
+
+  <section id="section__productos" class="pad__all__5">
+    <div class="column__1">
+      <h2>Productos destacados</h2>
+      <ul
+        role="list"
+        class="listado__x3 width__100 pad__top__5 recentProducts__list"
+      >
+        {% for item in item.recentProdRef.recentProducts %} {% include
+        "producto-card.njk" %} {% endfor %}
+      </ul>
+      <a href="/desarrollos" class="btn">Ver todos los proyectos</a>
+    </div>
+  </section>
+
   {% endfor %}
 </div>
+<script>
+  const swiper = new Swiper(".testimonials-swiper", {
+    // Mostrar 2 slides a la vez
+    slidesPerView: 2,
+    //loop
+    loopFillGroupWithBlank: true,
+    loop: true,
+    // Espacio entre slides
+    spaceBetween: 30,
+    // Navegación
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    // Paginación
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      // Cuando el ancho de la ventana es >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // Cuando el ancho de la ventana es >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    },
+  });
+</script>

@@ -60,6 +60,13 @@ module.exports = async function () {
         "alt": asset->{altText}
       },
     },
+    testy{
+      testyH2,
+      testyList[]{
+        name,
+        text
+      }
+    }, 
     recentProdRef{
       "recentProducts": recentProducts[]->{
         title,

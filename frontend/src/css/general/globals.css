@@ -412,6 +412,35 @@ section{
     }
 }
 
+ul.recentProducts__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+ul.recentProducts__list > li{
+    width: 350px;
+    overflow: hidden;
+    padding: 0;
+    aspect-ratio: 9/16 !important;
+    background-color: transparent !important;
+    h2, span, a.btn{
+        display: none;
+    }
+    .card__pic{
+        height: 100%;
+        picture{
+            height: 100%;
+            margin: 0;
+            img{   
+                height: 100% !important;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
 #section__404{
     min-height: 60vh;
     h2{
@@ -527,6 +556,14 @@ section{
 
 /*  Móvil  */
 @media only screen and (max-width: 768px) {
+
+    ul.recentProducts__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5%;
+    }
 
     .column__3{
         flex-direction: column;

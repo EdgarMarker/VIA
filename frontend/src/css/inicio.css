@@ -92,9 +92,88 @@
     }
 }
 
-#section__productos .column__1{
-    border-top: 1px solid #ccc;
-    padding-top: 5%;
+#home_testy{
+    h3{
+        width: 100%;
+    }
+    .column__1{
+        position: relative;
+        h2{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .testimonials-swiper {
+        width: 100%;
+        padding: 20px 0;
+    }
+    .swiper-slide {
+        height: auto;
+    }
+    .testy__card {
+        min-width: 350px;
+        border-radius: 32px;
+        aspect-ratio: 3/2;
+        padding: 20px;
+        border: 1px solid #eee;
+        height: 100%;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        background-color: var(--color-secondary-light);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    .swiper-button-next::after, .swiper-button-prev::after{
+        content: "";
+        display: block;
+        width: 24px;
+        aspect-ratio: 1/1;
+        background-image: url("../assets/svg/Arrow-black.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .swiper-button-next:hover ,.swiper-button-prev:hover{
+        background-color: var(--color-black);
+        &::after{
+            background-image: url("../assets/svg/Arrow-white.svg");
+        }
+    }
+    .swiper-button-next:hover, .swiper-button-prev:hover{
+        transform: rotate(180deg);
+    }
+    .swiper-button-next::after{
+        transform: rotate(180deg);
+    }
+    .swiper-button-prev:hover{
+        transform: rotate(180deg);
+    }
+    .swiper-pagination-bullet{
+        background-color: var(--color-primary);
+    }
+    .stars-container {
+        display: flex;
+        margin-top: 8px;
+        svg{
+            width: 20px;
+            path{
+                fill: var(--color-primary);
+            }
+        }
+    }
+}
+
+#section__productos {
+    background-color: var(--color-black);
+    h2{
+        color: var(--color-white);
+        width: 100%;
+    }
+    .column__1{
+        border-top: 1px solid #ccc;
+        padding-top: 5%;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -108,6 +187,15 @@
             padding-left: 0;
             picture{
                 width: 100%;
+            }
+        }
+    }
+    #home_testy{
+        .column__1{
+            width: 100% !important;
+            .swiper-button-next, .swiper-button-prev{
+                top: 97% !important;
+                bottom: 0 !important;
             }
         }
     }
