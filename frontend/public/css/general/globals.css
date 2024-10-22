@@ -88,6 +88,7 @@ body{
 /*  Text globals  */
 
 h1{
+    font-family: "Onest", sans-serif;
     font-size: var(--size-md);
     font-weight: 300;
     line-height: 1.2;
@@ -95,6 +96,7 @@ h1{
 }
 
 h2{
+    font-family: "Onest", sans-serif;
     font-size: var(--size-2xl);
     color: var(--color-black);
     font-weight: 400;
@@ -103,6 +105,7 @@ h2{
 }
 
 h3{
+    font-family: "Onest", sans-serif;
     font-size: var(--size-md);
     line-height: 1.2;
     margin-bottom: 20px;
