@@ -97,6 +97,15 @@ export default {
       },
     },
     {
+      name: 'heroImgSecond',
+      title: 'Imagen secundaria',
+      group: 'hero',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'introH3',
       title: 'Subtítulo indicador para la introducción',
       type: 'string',

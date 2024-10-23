@@ -22,6 +22,10 @@ module.exports = async function () {
       "media": asset->{url},
       "alt": asset->{altText}
     },
+    heroImgSecond{
+      "media": asset->{url},
+      "alt": asset->{altText}
+    },
     introH3,
     introH2,
     introRichText,

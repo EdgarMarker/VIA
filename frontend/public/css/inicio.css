@@ -15,6 +15,45 @@
         color: var(--color-white);
         font-size: var(--size-md);
     }
+    .column__2{
+        .col__right{
+            position: relative;
+        }
+    }
+    .secondary__img{
+        position: absolute;
+        clip-path: polygon(40% 0, 100% 0%, 60% 100%, 0% 100%);
+        top: 50%;
+        right: -40%;
+        width: clamp(50%, 400px, 100%);
+        transform: translate(-50%, -50%);
+    }
+    .wrapper__shape__hero{
+    position: relative;
+    left: -15%;
+        .shape__hero{
+            clip-path: polygon(40% 0, 100% 0%, 60% 100%, 0% 100%);
+            overflow: hidden;
+            picture{
+                position: relative;
+                z-index: 2;
+            }
+            .shape__hero__video{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+            }
+        }
+        .overlay__shape__hero{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 30% 100%);
+        }
+    }
 }
 
 #home_about_via{
@@ -104,6 +143,7 @@
         h2{
             width: 100%;
             text-align: center;
+            font-weight: 600;
         }
     }
     .testimonials-swiper {
@@ -114,13 +154,15 @@
         height: auto;
     }
     .testy__card {
-        min-width: 350px;
+        height: auto;
         border-radius: 32px;
-        aspect-ratio: 3/2;
         padding: 20px;
         background-color: white;
         border: 1px solid white;
         height: 100%;
+        h3{
+            font-weight: 500;
+        }
     }
     .swiper-button-next, .swiper-button-prev{
         background-color: var(--color-secondary-light);
@@ -203,4 +245,13 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    #section__hero{
+        .secondary__img{
+            width: clamp(50%, 200px, 100%);
+        }
+    }
+    
 }

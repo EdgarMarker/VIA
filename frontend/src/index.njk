@@ -24,21 +24,61 @@ permalink: "/{{ page.fileSlug }}/"
         <a class="btn btn__hero">{{ item.heroBtn }}</a>
       </div>
       <div class="col__right width__55">
-        {% if item.heroImg %}
-        <picture>
-          {% for format, images in item.heroImg %}
-          <source
+        <div class="secondary__img">
+          {% if item.heroImgSecond %}
+          <picture>
+            {% for format, images in item.heroImgSecond %}
+            <source
             srcset="{{ images | srcset }}"
             sizes="(max-width: 1200px) 100vw, 1200px"
             type="image/{{ format }}"
-          />
-          {% endfor %}
-          <img
+            />
+            {% endfor %}
+            <img
+            src="{{ item.heroImgSecond.jpeg[0].url }}"
+            alt="{{ item.heroImgSecondAlt }}"
+            /> 
+          </picture>
+          {% endif %}
+        </div>
+        <div class="wrapper__shape__hero">
+          <div class="shape__hero">
+            <video autoplay loop  muted class="shape__hero__video">
+              <source src="./assets/video/hero_background.mp4" type="video/mp4">
+            </video>
+
+            {% if item.heroImg %}
+            <picture>
+              {% for format, images in item.heroImg %}
+              <source
+              srcset="{{ images | srcset }}"
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              type="image/{{ format }}"
+              />
+              {% endfor %}
+              <img
+              src="{{ item.heroImg.jpeg[0].url }}"
+              alt="{{ item.heroImgAlt }}"
+              />
+            </picture>
+            {% endif %}
+          </div>
+          {% if item.heroImg %}
+          <picture class="overlay__shape__hero">
+            {% for format, images in item.heroImg %}
+            <source
+            srcset="{{ images | srcset }}"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            type="image/{{ format }}"
+            />
+            {% endfor %}
+            <img
             src="{{ item.heroImg.jpeg[0].url }}"
             alt="{{ item.heroImgAlt }}"
-          />
-        </picture>
-        {% endif %}
+            />
+          </picture>
+          {% endif %}
+        </div>
       </div>
     </div>
   </section>

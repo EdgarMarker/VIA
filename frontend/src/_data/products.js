@@ -11,6 +11,22 @@ module.exports = async function() {
     publishedAt,
     "categories": categories[]->title,
     "categoriesSlug": categories[]->slug,
+    mainImage{
+      "media": asset->{url},
+      "alt": asset->{altText}
+    },
+    pageIntro{
+      desc,
+      linkWeb,
+      img1{
+        "media": asset->{url},
+        "alt": asset->{altText}
+      },
+      img2{
+        "media": asset->{url},
+        "alt": asset->{altText}
+      },
+    },
     body[]{
       ...,
       _type == 'image' => {
@@ -18,11 +34,7 @@ module.exports = async function() {
           url,
           "alt": altText
         }
-      }
-    },
-    mainImage{
-      "media": asset->{url},
-      "alt": asset->{altText}
+      },
     },
   }`);
 

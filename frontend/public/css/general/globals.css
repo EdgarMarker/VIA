@@ -299,6 +299,7 @@ section{
 /*  Flexbox  */
 .flex{display: flex;}
 .flex-col{flex-direction: column;}
+.flex-row{flex-direction: row;}
 .flex__align__c { align-items: center; }
 .flex__align__e { align-items: flex-end; }
 .flex__align__s { align-items: stretch; }

@@ -1,6 +1,6 @@
 [
     { "name": "Inicio", "url": "/" },
-    { "name": "Ubicaciones", "url": "/ubicaciones/" },
+    { "name": "Nosotros", "url": "/nosotros/" },
     { 
         "name": "Desarrollos", 
         "url": "/desarrollos/",

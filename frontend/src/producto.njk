@@ -33,11 +33,51 @@ permalink: "/productos/{{ producto.slug.current }}/"
     </div>
   </section>
 
+  <section id="product__intro" class="pad__tb__5 pad__lr__10">
+    <p><a href="/desarrollos/">Desarrollos </a><strong>/ Sobre el proyecto</strong></p>
+    <div class="column__2 pad__tb__5">
+      <div class="col__left">
+        <h2>{{ producto.title }}</h2>
+        <p>{{ producto.category }}</p>
+      </div>
+      <div class="col__right flex flex-row">
+        <div>{{ producto.pageIntro.desc | safe }}</div>
+        <a href="{{ producto.pageIntro.linkWeb }}" class="btn">
+          Visitar sitio web
+        </a> 
+      </div>
+    </div>
+    <div class="column__2">
+      <div class="col__left">
+        {% if producto.pageIntro.img1 %}
+          <picture>
+              {% for format, images in producto.pageIntro.img1 %}
+              <source srcset="{{ images | srcset }}" sizes="(max-width: 1200px) 100vw, 1200px" type="image/{{ format }}">
+              {% endfor %}
+              <img src="{{ proyecto.pageIntro.img1.jpeg[0].url }}" alt="{{ proyecto.pageIntro.img1.altText }}">
+          </picture>
+        {% endif %}
+      </div>
+      <div class="col__right">
+        {% if producto.pageIntro.img2 %}
+          <picture>
+              {% for format, images in producto.pageIntro.img2 %}
+              <source srcset="{{ images | srcset }}" sizes="(max-width: 1200px) 100vw, 1200px" type="image/{{ format }}">
+              {% endfor %}
+              <img src="{{ producto.pageIntro.img2.jpeg[0].url }}" alt="{{ producto.pageIntro.img2.altText }}">
+          </picture>
+        {% endif %}
+      </div>
+    </div>
+  </section>
   <section id="section__body" class="pad__all__5">
     <div class="column__1 max1400">
       <h3>Descripción</h3>
       {{ producto.body | safe }}
     </div>
+  </section>
+  <section id="product__intro" class="pad__tb__5 pad__lr__10">
+
   </section>
 
 </div>

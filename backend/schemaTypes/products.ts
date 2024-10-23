@@ -13,6 +13,10 @@ export default defineType({
         name: 'product',
         title: 'Producto',
     },
+    {
+      name: 'page',
+      title: 'Pagina de Producto',
+    }
   ],
   fields: [
     defineField({
@@ -86,6 +90,138 @@ export default defineType({
       type: 'blockContent',
       group: 'product'
     }),
+    /* Page intro */
+    defineField({
+      name: 'pageIntro',
+      title: 'Introducción de la página',
+      group: 'page',
+      type: 'object',
+      fields: [
+        {
+          name: 'desc',
+          title: 'Descripción',
+          type: 'blockContent',
+        },
+        {
+          name: 'linkWeb',
+          title: 'Link de la pagina web',
+          type: 'string',
+        },
+        {
+          name: 'img1',
+          title: 'Primera imagen',
+          type: 'image',
+        },
+        {
+          name: 'img2',
+          title: 'Segunda imagen',
+          type: 'image',
+        },
+      ]
+    }),
+    /* Page brochure */
+    defineField({
+      name: 'pageBrochure',
+      title: 'Brochure de la página',
+      group: 'page',
+      type: 'object',
+      fields: [
+        {
+          name: 'desc1',
+          title: 'Descripción',
+          type: 'blockContent',
+        },
+        {
+          name: 'desc2',
+          title: 'Segunda descripción',
+          type: 'blockContent',
+        },
+        {
+          name: 'fileBrochure',
+          title: 'Archivo de brochure',
+          type: 'file',
+        },
+      ]
+    }),
+    /* Page Location */
+    defineField({
+      name: 'pageLocation',
+      title: 'Ubicación de la página',
+      group: 'page',
+      type: 'object',
+      fields: [
+        {
+          name: 'desc',
+          title: 'Descripción',
+          type: 'blockContent',
+        },
+        {
+          name: 'map',
+          title: 'Embed de google map',
+          type: 'text',
+        },
+        {
+          name: 'linkLocation',
+          title: 'Link de la ubicación',
+          type: 'string',
+        }
+      ]
+    }),
+    /* Page Amenities */
+    defineField({
+      name: 'pageAmenities',
+      title: 'Amenidades de la página',
+      group: 'page',
+      type: 'object',
+      fields: [
+        {
+          name: 'desc',
+          title: 'Descripción',
+          type: 'blockContent',
+        },
+        {
+          name: 'amenities',
+          title: 'Amenidades',
+          type: 'array',
+          of: [{
+            type: 'object', fields: [
+              {
+                name: 'name',
+                title: 'Amenidad',
+                type: 'string',
+              },
+              {
+                name: 'img',
+                title: 'Imagen',
+                type: 'image',
+              }
+            ]
+          }],
+          options: {
+            layout: 'grid'
+          },
+          validation: (rule) => rule.max(10).warning('Se han rebasado las 10 amenidades recomendadas')
+        }
+      ]
+    }),
+    /* Page Gallery */
+    defineField({
+      name: 'pageGallery',
+      title: 'Galería de la página',
+      group: 'page',
+      type: 'object',
+      fields: [
+        {
+          name: 'gallery',
+          title: 'Galería',
+          type: 'array',
+          of: [{ type: 'image' }],
+          options: {
+            layout: 'grid'
+          }
+        }
+      ]
+    })
   ],
 
   preview: {
