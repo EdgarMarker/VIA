@@ -222,6 +222,13 @@
     }
 }
 
+@media screen and (max-width: 1300px) {
+    #section__hero{
+        .secondary__img{
+            width: clamp(50%, 300px, 100%);
+        }
+    }   
+}
 @media screen and (max-width: 1024px) {
     #home_ourMethod{
         .col__left{

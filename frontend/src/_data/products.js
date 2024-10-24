@@ -27,6 +27,36 @@ module.exports = async function() {
         "alt": asset->{altText}
       },
     },
+    pageBrochure{
+      desc1,
+      desc2,
+      fileBrochure{
+        asset->{
+          url
+        }
+      }
+    },
+    pageLocation{
+      desc,
+      map,
+      linkLocation
+    },
+    pageAmenities{
+      desc,
+      amenities[]{
+        name,
+        img{
+          "media": asset->{url},
+          "alt": asset->{altText}
+        }
+      }
+    },
+    pageGallery{
+      gallery[]{   
+        "media": asset->{url},
+        "alt": asset->{altText}
+      }
+    },
     body[]{
       ...,
       _type == 'image' => {
