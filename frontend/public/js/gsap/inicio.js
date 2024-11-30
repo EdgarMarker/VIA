@@ -80,9 +80,10 @@ function gsapSoloAnimations() {
     scrub: true,
   };
   gsap.from(".dot", {
+    opacity: 0,
     scale: 0.06,
     duration: 1,
-    ease: "power4.out",
+    ease: "elastic.out(1,0.5)",
     stagger: 0.4,
     scrollTrigger: {
       ...triggerOptions,
