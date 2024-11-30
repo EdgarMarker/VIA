@@ -106,46 +106,18 @@ export default {
       },
     },
     {
-      name: 'introH3',
-      title: 'Subtítulo indicador para la introducción',
-      type: 'string',
-      group: 'intro',
-    },
-    {
-      name: 'introH2',
-      title: 'Título principal para la introducción',
-      type: 'string',
-      group: 'intro',
-    },
-    {
-      name: 'introRichText',
-      title: 'Descripción para la introducción',
-      type: 'blockContent',
-      group: 'intro',
-    },
-    {
-      name: 'introBtn',
-      title: 'Texto del botón',
-      type: 'string',
-      group: 'intro',
-    },
-    {
-      name: 'introImg1',
-      title: 'Imagen principal para la introducción',
-      type: 'image',
-      group: 'intro',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'introImg2',
-      title: 'Imagen secundaria para la introducción',
-      type: 'image',
-      group: 'intro',
-      options: {
-        hotspot: true,
-      },
+      name: 'timeline',
+      title: 'Timeline',
+      type: 'object',
+      group: 'hero',
+      fields: [
+        {
+          name: 'list',
+          title: 'List',
+          type: 'array',
+          of: [{type: 'reference', to: [{type: 'products'}]}],
+        }
+      ]
     },
     {
       name: 'aboutVia',

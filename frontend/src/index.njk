@@ -21,7 +21,7 @@ permalink: "/{{ page.fileSlug }}/"
         <h1>{{ item.heroH1 }}</h1>
         <div>{{ item.heroH2 | safe }}</div>
         <p>{{ item.heroP }}</p>
-        <a class="btn btn__hero">{{ item.heroBtn }}</a>
+        <a class="btn btn--right btn__hero">{{ item.heroBtn }}  |</a>
       </div>
       <div class="col__right width__55">
         <div class="secondary__img">
@@ -83,52 +83,23 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
   </section>
 
-  <section id="section__intro" class="pad__all__5 fadeInOut">
-    <div class="column__2">
-      <div class="col__left width__40">
-        <h3>{{ item.introH3 }}</h3>
-        <h2>{{ item.introH2 }}</h2>
-      </div>
-      <div class="col__right width__60">
-        <div>{{ item.introRichText | safe }}</div>
-        <a class="btn btn__hero">{{ item.introBtn }}</a>
-        <div class="column__2 mar__top__5">
-          <div class="col__left flex__justify__sb width__30">
-            {% if item.introImg2 %}
-            <picture>
-              {% for format, images in item.introImg2 %}
-              <source
-                srcset="{{ images | srcset }}"
-                sizes="(max-width: 600px) 100vw, 600px"
-                type="image/{{ format }}"
-              />
-              {% endfor %}
-              <img
-                src="{{ item.introImg2.jpeg[0].url }}"
-                alt="{{ item.introImg2Alt }}"
-              />
-            </picture>
-            {% endif %}
-          </div>
-          <div class="col__right width__70 pad__left__5">
-            {% if item.introImg1 %}
-            <picture>
-              {% for format, images in item.introImg1 %}
-              <source
-                srcset="{{ images | srcset }}"
-                sizes="(max-width: 900px) 100vw, 900px"
-                type="image/{{ format }}"
-              />
-              {% endfor %}
-              <img
-                src="{{ item.introImg1.jpeg[0].url }}"
-                alt="{{ item.introImg1Alt }}"
-              />
-            </picture>
-            {% endif %}
-          </div>
+  <section id="section__intro" class="pad__all__5">
+    <h3 class="pad__lr__5">/Nuestra trayectoria</h3>
+    <div class="column__1">
+      <div class="timeline" id="timeline">
+        {% for proyecto in item.timeline.list %}
+        <div class="item">
+          <div class="dot"></div>
+          <div class="line"></div>
+          <h3 class="h3">
+            {{ proyecto.title }}
+            <br>
+            {{ proyecto.publishedAt }} 
+          </h3>
         </div>
+        {% endfor %}
       </div>
+     
     </div>
   </section>
 
@@ -139,8 +110,8 @@ permalink: "/{{ page.fileSlug }}/"
         <h2>{{ item.aboutVia.aboutViaH2 }}</h2>
       </div>
       <div class="col__right">
-        <div>{{ item.aboutVia.aboutViaRichText1 | safe }}</div>
-        <div>{{ item.aboutVia.aboutViaRichText2 | safe }}</div>
+        <p>{{ item.aboutVia.aboutViaRichText1 | safe }}</p>
+        <p>{{ item.aboutVia.aboutViaRichText2 | safe }}</p>
       </div>
     </div>
     <div class="column__1 pad__b__5 pad__lr__5">
@@ -172,7 +143,20 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
   </section>
 
-  <section id="home_ourMethod" class="pad__tb__5 pad__lr__5">
+  <section id="home_wySelectUs">
+    <div class="column__2 pad__tb__5 pad__lr__5">
+      <div class="col__left">
+        <h2>{{ item.aboutVia.aboutViaH2 }}</h2>
+        <a class="btn btn--down" id="toOurMethod">Nuestra metodología |</a>
+      </div>
+      <div class="col__right">
+        <p>{{ item.aboutVia.aboutViaRichText1 | safe }}</p>
+        <p>{{ item.aboutVia.aboutViaRichText2 | safe }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="home_ourMethod" class="pad__lr__5">
     <h3>/Nuestra metodología</h3>
     <div class="column__2 pad__tb__5">
       <div class="col__left pad__right__10">
@@ -212,38 +196,42 @@ permalink: "/{{ page.fileSlug }}/"
 
   <section id="home_testy" class="pad__lr__5 pad__tb__5">
     <h3>/Testimonios</h3>
-    <div class="column__1">
-      <h2>{{ item.testy.testyH2 }}</h2>
-      <div class="swiper testimonials-swiper max1200">
-        <div class="swiper-wrapper">
-          {% for list in item.testy.testyList %}
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <div class="testy__card">
-              <div>{{ list.text | safe }}</div>
-              <h3>{{ list.name }}</h3>
-              <div class="stars-container">
-                <svg viewBox="0 0 24 24"">
-                  <path
+    <div class="column__2">
+      <div class="col__left">
+        <h2>{{ item.testy.testyH2 }}</h2>
+      </div>
+      <div class="col__right">
+
+        <div class="swiper testimonials-swiper max1200">
+          <div class="swiper-wrapper">
+            {% for list in item.testy.testyList %}
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="testy__card">
+                <div>{{ list.text | safe }}</div>
+                <h3>{{ list.name }}</h3>
+                <div class="stars-container">
+                  <svg viewBox="0 0 24 24"">
+                    <path
                     d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                  />
-                </svg>
-                <svg viewBox="0 0 24 24"">
-                  <path
+                    />
+                  </svg>
+                  <svg viewBox="0 0 24 24"">
+                    <path
                     d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                  />
-                </svg>
-                <svg viewBox="0 0 24 24"">
-                  <path
+                    />
+                  </svg>
+                  <svg viewBox="0 0 24 24"">
+                    <path
                     d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                  />
-                </svg>
-                <svg viewBox="0 0 24 24"">
-                  <path
+                    />
+                  </svg>
+                  <svg viewBox="0 0 24 24"">
+                    <path
                     d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                  />
-                </svg>
-                <svg viewBox="0 0 24 24">
+                    />
+                  </svg>
+                  <svg viewBox="0 0 24 24">
                   <path
                     d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
                   />
@@ -253,9 +241,9 @@ permalink: "/{{ page.fileSlug }}/"
           </div>
           {% endfor %}
         </div>
-
         <div class="swiper-pagination"></div>
       </div>
+    </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
@@ -271,7 +259,7 @@ permalink: "/{{ page.fileSlug }}/"
         {% for item in item.recentProdRef.recentProducts %} {% include
         "producto-card.njk" %} {% endfor %}
       </ul>
-      <a href="/desarrollos" class="btn">Ver todos los proyectos</a>
+      <a href="/desarrollos" class="btn btn--right">Ver todos los proyectos | </a>
     </div>
   </section>
 
@@ -309,5 +297,50 @@ permalink: "/{{ page.fileSlug }}/"
         spaceBetween: 30,
       },
     },
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const timeline = document.getElementById("timeline");
+      const divItems = Array.from(timeline.children); // Convertimos NodeList a Array para manejarlo mejor
+      let itemsPerWrapper = 5;
+
+      // Función para actualizar el contenido basado en la cantidad de elementos por fila
+      const updateTimeline = (itemsPerWrapper) => {
+          // Eliminamos los elementos del timeline antes de reinsertarlos en sus wrappers
+          timeline.innerHTML = '';
+
+          // Agrupamos en wrappers cada `itemsPerWrapper` elementos
+          for (let i = 0; i < divItems.length; i += itemsPerWrapper) {
+              const wrapper = document.createElement("div");
+              wrapper.className = "list";
+
+              // Tomamos un grupo de `itemsPerWrapper` elementos y los agregamos al wrapper
+              const group = divItems.slice(i, i + itemsPerWrapper);
+              group.forEach(item => wrapper.appendChild(item));
+
+              // Insertamos el wrapper al timeline
+              timeline.appendChild(wrapper);
+          }
+      };
+
+      const adjustItemsPerWrapper = () => {
+          const ipadScreen = window.matchMedia("(max-width: 1024px)");
+          const iphoneScreen = window.matchMedia("(max-width: 768px)");
+
+          if (iphoneScreen.matches) {
+              itemsPerWrapper = 2;
+          } else if (ipadScreen.matches) {
+              itemsPerWrapper = 3;
+          } else {
+              itemsPerWrapper = 5;
+          }
+          
+          updateTimeline(itemsPerWrapper);
+      };
+
+      adjustItemsPerWrapper();
+
+      window.addEventListener("resize", adjustItemsPerWrapper);
   });
 </script>

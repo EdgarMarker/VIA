@@ -232,6 +232,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-
+    let header = document.getElementById('header');
+    gsap.to(header, {
+        scrollTrigger: {
+            trigger: "#main",
+            start: "200px top",
+            end: "bottom top",
+            onEnter: () => {
+                header.classList.add('navBg');
+            },
+            onLeaveBack: () => {
+                header.classList.remove('navBg');
+            }
+        }
+    })
 
 });

@@ -1,0 +1,17 @@
+<div class="tooltip">
+  {% if item.mainImage%}
+  <picture>
+    {% for format, images in item.mainImage %}
+    <source
+      srcset="{{ images | srcset }}"
+      sizes="(max-width: 1200px) 100vw, 1200px"
+      type="image/{{ format }}"
+    />
+    {% endfor %}
+    <img
+      src="{{ item.mainImage.jpeg[0].url }}"
+      alt="{{ item.mainImage.Alt }}"
+    />
+  </picture>
+  {% endif %}
+</div>

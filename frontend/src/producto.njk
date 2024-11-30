@@ -8,7 +8,7 @@ pagination:
   data: collections.productos
   size: 1
   alias: producto
-permalink: "/productos/{{ producto.slug.current }}/"
+permalink: "/desarrollos/{{ producto.slug.current }}/"
 ---
 
 <div
@@ -22,7 +22,7 @@ permalink: "/productos/{{ producto.slug.current }}/"
       <span class="categoria_producto"
         >Tipo de producto:
         <a
-          href="/productos/categorias/{{ producto.categories | slugify }}"
+          href="/desarrollos/{{ producto.categories | slugify }}"
           >{{ producto.categories | join(", ") }}</a
         ></span
       >
@@ -145,81 +145,85 @@ permalink: "/productos/{{ producto.slug.current }}/"
 
   <section id="product__amenities" class="pad__tb__5 pad__lr__10">
     <h2 class="width__100">Amenidades VIA</h2>
-    <div class="width__100">{{producto.pageAmenities.desc | safe}}</div>
+    <div class="width__100">{{ producto.pageAmenities.desc | safe }}</div>
     <div class="column__1 pad__all__5">
       <ul role="list">
-          {% for item in producto.pageAmenities.amenities %}
-          <li class="amenities__card flex flex-col">
-            <p>
-              {{ item.name }}
-            </p>
-            {% if item.img %}
-            <picture>
-              {% for format, images in item.img %}
-              <source
-                srcset="{{ images | srcset }}"
-                sizes="(max-width: 900px) 100vw, 900px"
-                type="image/{{ format }}"
-              />
-              {% endfor %}
-              <img
-                src="{{ item.img.jpeg[0].url }}"
-                alt="{{ item.img.altText }}"
-              />
-            </picture>
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
+        {% for item in producto.pageAmenities.amenities %}
+        <li class="amenities__card flex flex-col">
+          <p>
+            {{ item.name }}
+          </p>
+          {% if item.img %}
+          <picture>
+            {% for format, images in item.img %}
+            <source
+              srcset="{{ images | srcset }}"
+              sizes="(max-width: 900px) 100vw, 900px"
+              type="image/{{ format }}"
+            />
+            {% endfor %}
+            <img
+              src="{{ item.img.jpeg[0].url }}"
+              alt="{{ item.img.altText }}"
+            />
+          </picture>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </section>
 
   <section id="product__gallery" class="pad__tb__5 pad__lr__10">
     <h2 class="width__100">Galería</h2>
     <div class="column__1">
-      <div id="main-carousel" class="splide" aria-label="Splide Basic HTML Example" role="group">
+      <div
+        id="main-carousel"
+        class="splide"
+        aria-label="Splide Basic HTML Example"
+        role="group"
+      >
         <div class="splide__track">
           <ul class="splide__list">
             {% for item in producto.pageGallery.gallery %}
-              <li class="splide__slide">
-                <picture>
-                  {% for format, images in item %}
-                  <source
-                    srcset="{{ images | srcset }}"
-                    sizes="(max-width: 1200px) 100vw, 1200px"
-                    type="image/{{ format }}"
-                  />
-                  {% endfor %}
-                  <img 
-                    src="{{ item.jpeg[0].url }}" 
-                    alt="{{ item.altText }}" 
-                  />
-                </picture>
-              </li>
+            <li class="splide__slide">
+              <picture>
+                {% for format, images in item %}
+                <source
+                  srcset="{{ images | srcset }}"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/{{ format }}"
+                />
+                {% endfor %}
+                <img src="{{ item.jpeg[0].url }}" alt="{{ item.altText }}" />
+              </picture>
+            </li>
             {% endfor %}
           </ul>
         </div>
       </div>
-  
-      <div id="thumbnail-carousel" class="splide" aria-label="Splide Basic HTML Example" role="group">
+
+      <div
+        id="thumbnail-carousel"
+        class="splide"
+        aria-label="Splide Basic HTML Example"
+        role="group"
+      >
         <div class="splide__track">
           <ul class="splide__list">
             {% for item in producto.pageGallery.gallery %}
-              <li class="splide__slide">
-                <picture>
-                  {% for format, images in item %}
-                  <source
-                    srcset="{{ images | srcset }}"
-                    sizes="(max-width: 1200px) 100vw, 1200px"
-                    type="image/{{ format }}"
-                  />
-                  {% endfor %}
-                  <img 
-                    src="{{ item.jpeg[0].url }}" 
-                    alt="{{ item.altText }}" 
-                  />
-                </picture>
-              </li>
+            <li class="splide__slide">
+              <picture>
+                {% for format, images in item %}
+                <source
+                  srcset="{{ images | srcset }}"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/{{ format }}"
+                />
+                {% endfor %}
+                <img src="{{ item.jpeg[0].url }}" alt="{{ item.altText }}" />
+              </picture>
+            </li>
             {% endfor %}
           </ul>
         </div>

@@ -70,6 +70,12 @@ module.exports = async function () {
         name,
         text
       }
+    },
+    timeline{
+       list[]->{ 
+        title,
+        publishedAt
+      }
     }, 
     recentProdRef{
       "recentProducts": recentProducts[]->{

@@ -81,7 +81,7 @@ export default defineType({
     defineField({
       name: 'publishedAt',
       title: 'Fecha de publicación',
-      type: 'datetime',
+      type: 'date',
       group: 'product'
     }),
     defineField({
