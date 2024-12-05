@@ -1,6 +1,6 @@
 ---
 eleventyComputed:
-  title: "{{ products[0].titleseo }}"
+  title: "{{ productos[0].titleseo }}"
   description: "{{ productos[0].descseo }}"
   keywords: "{{ productos[0].keyseo }}"
 layout: base.njk
@@ -17,21 +17,33 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
   data-css="producto"
   data-js="producto"
 >
+
   <section id="section__hero" class="pad__lr__5 pad__top__10">
-    <div class="column__1 max1400">
-      <span class="categoria_producto"
-        >Tipo de producto:
-        <a
+    <div class="column__2">
+      <div class="col__left">
+        <span class="categoria_producto">
+          <a href="/desarrollos/">Desarrollos / </a>
+          <a
           href="/desarrollos/{{ producto.categories | slugify }}"
           >{{ producto.categories | join(", ") }}</a
-        ></span
-      >
-      <h1>{{ producto.title }}</h1>
+          >
+        </span>
+        <h1>{{ producto.title }}</h1>
+        <span class="categoria_producto">
+          {{ producto.hero.heroType }}
+        </span>
+      </div>
+      <div class="col__right">
+        <p>{{ producto.hero.heroIntro }}</p>
+        <a href="{{ producto.hero.heroWebLink }}" class="btn btn--right"
+          >Visitar sitio web</a
+        >
+      </div>
     </div>
   </section>
 
   <section id="section__main__image">
-    <div class="column__1 max1400">
+    <div class="column__1">
       {% if producto.mainImage %}
       <picture>
         {% for format, images in producto.mainImage %}
@@ -50,28 +62,12 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
     </div>
   </section>
 
-  <section id="product__intro" class="pad__tb__5 pad__lr__10">
-    <h3>
-      <a href="/desarrollos/">Desarrollos </a
-      ><strong>/ Sobre el proyecto</strong>
-    </h3>
-    <div class="column__2 pad__tb__5 intro__first__child">
-      <div class="col__left">
-        <h2>{{ producto.title }}</h2>
-        <p>{{ producto.category }}</p>
-      </div>
-      <div class="col__right flex flex-row">
-        <div>{{ producto.pageIntro.desc | safe }}</div>
-        <a href="{{ producto.pageIntro.linkWeb }}" class="btn">
-          Visitar sitio web
-        </a>
-      </div>
-    </div>
+  <section id="home_twinImg">
     <div class="column__2">
       <div class="col__left">
-        {% if producto.pageIntro.img1 %}
+        {% if producto.twinDivisor.img1 %}
         <picture>
-          {% for format, images in producto.pageIntro.img1 %}
+          {% for format, images in producto.twinDivisor.img1 %}
           <source
             srcset="{{ images | srcset }}"
             sizes="(max-width: 1200px) 100vw, 1200px"
@@ -79,16 +75,16 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
           />
           {% endfor %}
           <img
-            src="{{ proyecto.pageIntro.img1.jpeg[0].url }}"
-            alt="{{ proyecto.pageIntro.img1.altText }}"
+            src="{{ producto.twinDivisor.img1.jpeg[0].url }}"
+            alt="{{ producto.twinDivisor.img1.altText }}"
           />
         </picture>
         {% endif %}
       </div>
       <div class="col__right">
-        {% if producto.pageIntro.img2 %}
+        {% if producto.twinDivisor.img2 %}
         <picture>
-          {% for format, images in producto.pageIntro.img2 %}
+          {% for format, images in producto.twinDivisor.img2 %}
           <source
             srcset="{{ images | srcset }}"
             sizes="(max-width: 1200px) 100vw, 1200px"
@@ -96,48 +92,63 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
           />
           {% endfor %}
           <img
-            src="{{ producto.pageIntro.img2.jpeg[0].url }}"
-            alt="{{ producto.pageIntro.img2.altText }}"
+            src="{{ producto.twinDivisor.img2.jpeg[0].url }}"
+            alt="{{ producto.twinDivisor.img2.altText }}"
           />
         </picture>
         {% endif %}
       </div>
     </div>
   </section>
-
-  <section id="product__brochure" class="pad__tb__5 pad__lr__10">
-    <h2 class="width__100">Descripción General</h2>
-    <div class="column__2">
+  <section id="home_descGeneral" class="fadeInOut">
+    <div class="column__2 pad__tb__5 pad__lr__5">
       <div class="col__left">
-        <a href="{{ producto.pageBrochure.fileBrochure.url }}" class="btn"
-          >Descargar brochure</a
-        >
+        <h2>{{ producto.general.h2 }}</h2>
+        <a class="btn btn--down" id="toOurMethod">Descargar Brochure |</a>
       </div>
-      <div class="col__right flex-row">
-        <div>{{ producto.pageBrochure.desc1 | safe }}</div>
-        <div>{{ producto.pageBrochure.desc2 | safe }}</div>
+      <div class="col__right">
+        <p>{{ producto.general.richText1 | safe }}</p>
+        <p>{{ producto.general.richText2 | safe }}</p>
       </div>
     </div>
   </section>
-
+  <section id="home_divisor">
+    <div class="column__1">
+      {% if producto.divisor %}
+        <picture>
+          {% for format, images in producto.divisor %}
+          <source
+            srcset="{{ images | srcset }}"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            type="image/{{ format }}"
+          />
+          {% endfor %}
+          <img
+            src="{{ producto.divisor.jpeg[0].url }}"
+            alt="{{ producto.divisor.altText }}"
+          />
+        </picture>
+        {% endif %}
+    </div>
+  </section>
   <section id="product__location" class="pad__tb__5 pad__lr__10">
     <h2 class="width__100">Ubicación</h2>
     <div class="column__2">
       <div class="col__left pad__right__5">
         <div>
-          {{ producto.pageLocation.desc | safe }}
+          {{ producto.location.desc | safe }}
         </div>
         <a
-          href="{{ producto.pageLocation.linkLocation }}"
+          href="{{ producto.location.linkLocation }}"
           target="_blank"
-          class="btn"
+          class="btn btn--right"
           >Abrir en Google Maps</a
         >
       </div>
       <div class="col__right">
         <div
           id="map-container-product"
-          data-map-iframe-product="{{ producto.pageLocation.map | escape }}"
+          data-map-iframe-product="{{ producto.location.map | escape }}"
         ></div>
       </div>
     </div>
@@ -145,10 +156,10 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
 
   <section id="product__amenities" class="pad__tb__5 pad__lr__10">
     <h2 class="width__100">Amenidades VIA</h2>
-    <div class="width__100">{{ producto.pageAmenities.desc | safe }}</div>
+    <div class="amenity__desc">{{ producto.amenities.desc | safe }}</div>
     <div class="column__1 pad__all__5">
       <ul role="list">
-        {% for item in producto.pageAmenities.amenities %}
+        {% for item in producto.amenities.list %}
         <li class="amenities__card flex flex-col">
           <p>
             {{ item.name }}
@@ -185,7 +196,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
       >
         <div class="splide__track">
           <ul class="splide__list">
-            {% for item in producto.pageGallery.gallery %}
+            {% for item in producto.gallery.list %}
             <li class="splide__slide">
               <picture>
                 {% for format, images in item %}
@@ -211,7 +222,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
       >
         <div class="splide__track">
           <ul class="splide__list">
-            {% for item in producto.pageGallery.gallery %}
+            {% for item in producto.gallery.list %}
             <li class="splide__slide">
               <picture>
                 {% for format, images in item %}
@@ -229,7 +240,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
         </div>
       </div>
     </div>
-    <a href="{{ producto.pageIntro.linkWeb }}" class="btn">Visitar sitio web</a>
+    <a href="{{ producto.pageIntro.linkWeb }}" class="btn btn--right">Visitar sitio web</a>
   </section>
 </div>
 
@@ -243,6 +254,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
   document.addEventListener("DOMContentLoaded", function () {
     var main = new Splide("#main-carousel", {
       type: "fade",
+      height: "70vh",
       rewind: true,
       pagination: false,
       arrows: true,
@@ -255,12 +267,6 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
       pagination: false,
       isNavigation: true,
       arrows: false,
-      breakpoints: {
-        600: {
-          fixedWidth: 60,
-          fixedHeight: 44,
-        },
-      },
     });
     main.sync(thumbnails);
     main.mount();

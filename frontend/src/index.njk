@@ -89,12 +89,13 @@ permalink: "/{{ page.fileSlug }}/"
       <div class="timeline" id="timeline">
         {% for proyecto in item.timeline.list %}
         <div class="item">
+          {% include 'tooltip-timeline.njk' %}
           <div class="dot"></div>
           <div class="line"></div>
           <h3 class="h3">
             {{ proyecto.title }}
             <br>
-            {{ proyecto.publishedAt }} 
+            {{ proyecto.year }} 
           </h3>
         </div>
         {% endfor %}
@@ -103,7 +104,7 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
   </section>
 
-  <section id="home_about_via">
+  <section id="home_about_via" class="fadeInOut">
     <h3 class="pad__lr__5">/Sobre VIA MX</h3>
     <div class="column__2 pad__tb__5 pad__lr__5">
       <div class="col__left">
@@ -143,7 +144,7 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
   </section>
 
-  <section id="home_wySelectUs">
+  <section id="home_wySelectUs" class="fadeInOut">
     <div class="column__2 pad__tb__5 pad__lr__5">
       <div class="col__left">
         <h2>{{ item.aboutVia.aboutViaH2 }}</h2>
@@ -156,7 +157,7 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
   </section>
 
-  <section id="home_ourMethod" class="pad__lr__5">
+  <section id="home_ourMethod" class="pad__lr__5 fadeInOut">
     <h3>/Nuestra metodología</h3>
     <div class="column__2 pad__tb__5">
       <div class="col__left pad__right__10">
@@ -194,7 +195,7 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
   </section>
 
-  <section id="home_testy" class="pad__lr__5 pad__tb__5">
+  <section id="home_testy" class="pad__lr__5 pad__tb__5 fadeInOut">
     <h3>/Testimonios</h3>
     <div class="column__2">
       <div class="col__left">
@@ -344,3 +345,22 @@ permalink: "/{{ page.fileSlug }}/"
       window.addEventListener("resize", adjustItemsPerWrapper);
   });
 </script>
+
+<script>
+  const bulletLine = document.querySelectorAll(".dot");
+  const tooltip = document.querySelectorAll(".tooltip");
+
+  bulletLine.forEach((bullet, idx) => {
+    bullet.addEventListener("mouseenter", () => {
+  
+      tooltip.forEach((t) => t.classList.remove("tooltipOnDisplay"));
+
+      tooltip[idx].classList.add("tooltipOnDisplay");
+    });
+
+    bullet.addEventListener("mouseleave", () => {
+      tooltip[idx].classList.remove("tooltipOnDisplay");
+    });
+  });
+</script>
+

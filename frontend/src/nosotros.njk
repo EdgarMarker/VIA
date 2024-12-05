@@ -1,70 +1,114 @@
 ---
 eleventyComputed:
-    title: "{{ nosotros[0].titleseo }}"
-    description: "{{ nosotros[0].descseo }}"
-    keywords: "{{ nosotros[0].keyseo }}"
+  title: "{{ nosotros[0].titleseo }}"
+  description: "{{ nosotros[0].descseo }}"
+  keywords: "{{ nosotros[0].keyseo }}"
 layout: "base.njk"
 permalink: "/{{ page.fileSlug }}/"
 ---
 
-<div data-barba="container" data-barba-namespace="nosotros" data-css="nosotros" data-js="nosotros">
-{% for item in nosotros %}
+<div
+  data-barba="container"
+  data-barba-namespace="nosotros"
+  data-css="nosotros"
+  data-js="nosotros"
+>
+  {% for item in nosotros %}
 
-    <section id="section__hero" class="pad__lr__5">
-        <div class="column__2">
-            <div class="col__left flex__justify__c pad__right__5 width__45">            
-                <h1>{{ item.heroH1 }}</h1>
-                <div>{{ item.heroH2 | safe }}</div>
-                <p>{{ item.heroP }}</p>
-                <a class="btn btn__hero">{{ item.heroBtn }}</a>
-            </div>
-            <div class="col__right width__55">
-                {% if item.heroImg %}
-                <picture>
-                    {% for format, images in item.heroImg %}
-                    <source srcset="{{ images | srcset }}" sizes="(max-width: 1200px) 100vw, 1200px" type="image/{{ format }}">
-                    {% endfor %}
-                    <img src="{{ item.heroImg.jpeg[0].url }}" alt="{{ item.heroImgAlt }}">
-                </picture>
-                {% endif %}
-            </div>
+  <section id="section__hero" class="pad__lr__5">
+    <div class="column__1">
+      <h1>{{ item.heroH1 }}</h1>
+      <div>{{ item.heroH2 | safe }}</div>
+      <a class="btn btn--right btn__hero">{{ item.heroBtn }}</a>
+    </div>
+  </section>
+
+  <section id="section__intro">
+    <h3 class="width__100">/ Nosotros</h3>
+    <div class="column__2">
+      <div class="col__left">
+        <h2>{{ item.general.weAreH2 | safe }}</h2>
+      </div>
+      <div class="col__right">
+        <p>{{ item.general.weAreRichText1 | safe }}</p>
+        <p>{{ item.general.weAreRichText2 | safe }}</p>
+      </div>
+    </div>
+    <div class="column__2 fadeInOut">
+      <div class="col__left">
+        <h2>{{ item.general.ourLocationH2 }}</h2>
+      </div>
+      <div class="col__right">
+        <p>{{ item.general.ourLocationRichText1 | safe }}</p>
+        <p>{{ item.general.ourLocationRichText2 | safe }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="section__commitment" class="fadeInOut">
+    <div class="column__1">
+      <ul role="list" class="listado__x3">
+        <li>
+          {% if item.commitment.img1 %}
+          <picture>
+            {% for format, images in item.commitment.img1 %}
+            <source
+              srcset="{{ images | srcset }}"
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              type="image/{{ format }}"
+            />
+            {% endfor %}
+            <img
+              src="{{ item.img1.jpeg[0].url }}"
+              alt="{{ item.img1.altText }}"
+            />
+          </picture>
+          {% endif %}
+        </li>
+        <li>
+          <p>
+            {{ item.commitment.desc | safe }}
+          </p>
+        </li>
+        <li>
+            {% if item.commitment.img2 %}
+          <picture>
+            {% for format, images in item.commitment.img2 %}
+            <source
+              srcset="{{ images | srcset }}"
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              type="image/{{ format }}"
+            />
+            {% endfor %}
+            <img
+              src="{{ item.img2.jpeg[0].url }}"
+              alt="{{ item.img2.altText }}"
+            />
+          </picture>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="section__values" class="fadeInOut">
+    <div class="column__2">
+        <div class="col__left">
+            <h2>{{item.values.h2}}</h2>
+            <p>{{item.values.desc}}</p>
         </div>
-    </section>
-
-
-    <section id="section__intro" class="pad__all__5 fadeInOut">
-        <div class="column__2">
-            <div class="col__left width__40">
-                <h3>{{ item.introH3 }}</h3>
-                <h2>{{ item.introH2 }}</h2>
-            </div>
-            <div class="col__right width__60">
-                <div>{{ item.introRichText | safe }}</div>
-                <div class="column__2 mar__top__5">
-                    <div class="col__left flex__justify__sb width__30">
-                        {% if item.introImg2 %}
-                        <picture>
-                            {% for format, images in item.introImg2 %}
-                            <source srcset="{{ images | srcset }}" sizes="(max-width: 1200px) 100vw, 1200px" type="image/{{ format }}">
-                            {% endfor %}
-                            <img src="{{ item.introImg2.jpeg[0].url }}" alt="{{ item.introImg2Alt }}">
-                        </picture>
-                        {% endif %}
-                    </div>
-                    <div class="col__right width__70 pad__left__5">
-                        {% if item.introImg1 %}
-                        <picture>
-                            {% for format, images in item.introImg1 %}
-                            <source srcset="{{ images | srcset }}" sizes="(max-width: 1200px) 100vw, 1200px" type="image/{{ format }}">
-                            {% endfor %}
-                            <img src="{{ item.introImg1.jpeg[0].url }}" alt="{{ item.introImg1Alt }}">
-                        </picture>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
+        <div class="col__right" role="list">
+            <ul class="listado__x2" role="list">
+                {% for item in item.values.list %}
+                <li>
+                    <h3>{{item.h3}}</h3>
+                    <p>{{item.p}}</p>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
-    </section>
+    </div>
+  </section>
 
-{% endfor %}
+  {% endfor %}
 </div>

@@ -16,7 +16,7 @@ export default defineType({
     {
       name: 'page',
       title: 'Pagina de Producto',
-    }
+    },
   ],
   fields: [
     defineField({
@@ -79,6 +79,13 @@ export default defineType({
       group: 'product'
     }),
     defineField({
+      name: 'year',
+      title: 'Año de publicación',
+      type: 'string',
+      group: 'product'
+
+    }),
+    defineField({
       name: 'publishedAt',
       title: 'Fecha de publicación',
       type: 'date',
@@ -92,60 +99,81 @@ export default defineType({
     }),
     /* Page intro */
     defineField({
-      name: 'pageIntro',
-      title: 'Introducción de la página',
+      name: 'hero',
+      title: 'Hero de pagina',
       group: 'page',
       type: 'object',
       fields: [
         {
-          name: 'desc',
-          title: 'Descripción',
-          type: 'blockContent',
+          name: 'heroType',
+          title: 'Tipo de vivienda',
+          type: 'string'
         },
         {
-          name: 'linkWeb',
-          title: 'Link de la pagina web',
-          type: 'string',
+          name: 'heroIntro',
+          title: 'Texto de hero',
+          type: 'string'
         },
+        {
+          name: 'heroWebLink',
+          title: 'Link de la web',
+          type: 'string'
+        }
+      ]
+    }),
+    defineField({
+      name: 'twinDivisor',
+      title: 'Divisor de dos imágenes',
+      type: 'object',
+      group: 'page',
+      fields: [
         {
           name: 'img1',
           title: 'Primera imagen',
-          type: 'image',
+          type: 'image'
         },
         {
           name: 'img2',
           title: 'Segunda imagen',
-          type: 'image',
-        },
+          type: 'image'
+        }
       ]
     }),
-    /* Page brochure */
     defineField({
-      name: 'pageBrochure',
-      title: 'Brochure de la página',
+      name: 'general',
+      title: 'Descripción general',
       group: 'page',
       type: 'object',
       fields: [
         {
-          name: 'desc1',
-          title: 'Descripción',
-          type: 'blockContent',
+          name: 'h2',
+          title: 'Titulo',
+          type: 'string'
         },
         {
-          name: 'desc2',
+          name: 'brochure',
+          type: 'file'
+        },
+        {
+          name: 'richText1',
+          title: 'Primera descripción',
+          type: 'text'
+        },
+        {
+          name: 'richText2',
           title: 'Segunda descripción',
-          type: 'blockContent',
-        },
-        {
-          name: 'fileBrochure',
-          title: 'Archivo de brochure',
-          type: 'file',
-        },
+          type: 'text'
+        }
       ]
     }),
-    /* Page Location */
     defineField({
-      name: 'pageLocation',
+      name: 'divisor',
+      title: 'Divisor',
+      type: 'image',
+      group: 'page'
+    }),
+    defineField({
+      name: 'location',
       title: 'Ubicación de la página',
       group: 'page',
       type: 'object',
@@ -167,9 +195,8 @@ export default defineType({
         }
       ]
     }),
-    /* Page Amenities */
     defineField({
-      name: 'pageAmenities',
+      name: 'amenities',
       title: 'Amenidades de la página',
       group: 'page',
       type: 'object',
@@ -180,7 +207,7 @@ export default defineType({
           type: 'blockContent',
         },
         {
-          name: 'amenities',
+          name: 'list',
           title: 'Amenidades',
           type: 'array',
           of: [{
@@ -204,15 +231,14 @@ export default defineType({
         }
       ]
     }),
-    /* Page Gallery */
     defineField({
-      name: 'pageGallery',
+      name: 'gallery',
       title: 'Galería de la página',
       group: 'page',
       type: 'object',
       fields: [
         {
-          name: 'gallery',
+          name: 'list',
           title: 'Galería',
           type: 'array',
           of: [{ type: 'image' }],

@@ -9,15 +9,12 @@ module.exports = async function() {
     title,
     slug,
     publishedAt,
-    "categories": categories[]->title,
-    "categoriesSlug": categories[]->slug,
-    mainImage{
-      "media": asset->{url},
-      "alt": asset->{altText}
+    hero{
+      heroType,
+      heroIntro,
+      heroWebLink
     },
-    pageIntro{
-      desc,
-      linkWeb,
+    twinDivisor{
       img1{
         "media": asset->{url},
         "alt": asset->{altText}
@@ -25,25 +22,26 @@ module.exports = async function() {
       img2{
         "media": asset->{url},
         "alt": asset->{altText}
-      },
-    },
-    pageBrochure{
-      desc1,
-      desc2,
-      fileBrochure{
-        asset->{
-          url
-        }
       }
     },
-    pageLocation{
+    general{
+      h2,
+      brochure,
+      richText1,
+      richText2
+    },
+    divisor{
+      "media": asset->{url},
+      "alt": asset->{altText}
+    },
+    location{
       desc,
       map,
       linkLocation
     },
-    pageAmenities{
+    amenities{
       desc,
-      amenities[]{
+      list[]{
         name,
         img{
           "media": asset->{url},
@@ -51,11 +49,17 @@ module.exports = async function() {
         }
       }
     },
-    pageGallery{
-      gallery[]{   
+    gallery{
+      list[]{   
         "media": asset->{url},
         "alt": asset->{altText}
       }
+    },
+    "categories": categories[]->title,
+    "categoriesSlug": categories[]->slug,
+    mainImage{
+      "media": asset->{url},
+      "alt": asset->{altText}
     },
     body[]{
       ...,

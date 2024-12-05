@@ -1,5 +1,6 @@
 #section__hero{
     background-color: var(--color-secondary);
+    padding: 5%;
     padding-top: calc(60px + 5%);
     h1{
         color: var(--color-accent);
@@ -14,5 +15,73 @@
     p{
         color: var(--color-white);
         font-size: var(--size-md);
+    }
+}
+
+#section__intro{
+    padding: 5%;
+    .column__2{
+        padding: 5% 0;
+        .col__left{
+            padding-right: 10%;
+        }
+        .col__right{
+            padding-left: 5%;
+            flex-direction: row !important;
+            gap: 5%;
+            p:last-child{
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+
+#section__commitment{
+    background-color: var(--color-secondary);
+    padding: 5% 0;
+    ul{
+        li{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-style: italic;
+                color: var(--color-white);
+            }
+        }
+    }
+}
+
+#section__values{
+    padding: 5%;
+    .column__2{
+        .col__left{
+            p{
+                max-width: 400px;
+                color: rgba(0, 0, 0, 0.25);
+            }
+        }
+        .col__right{
+            ul{
+                li{
+                    margin: 0;
+                    padding: 30px;
+                    aspect-ratio: 1/1;
+                    border-top: 1px solid var(--color-secondary);
+                    transition: background-color 0.3s ease-in-out;
+                    h3{
+                        color: var(--color-primary);
+                        font-weight: 600;
+                    }
+                }
+                li:hover{
+                    background-color: var(--color-secondary);
+                    p{
+                        color: var(--color-white);
+                    }
+                }
+            }
+        }
     }
 }

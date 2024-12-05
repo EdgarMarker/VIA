@@ -9,6 +9,7 @@
 #section__hero{
     background-color: var(--color-secondary);
     padding-top: calc(60px + 5%);
+    min-height: 50vh;
     h1{
         color: var(--color-accent);
     }
@@ -27,4 +28,22 @@
 
 .hide__category .card__category{
     display: none;
+}
+
+#section__intro {
+  ul{
+    padding:0% 10% 5% 10%;
+	  display: flex;
+	  flex-wrap: wrap;
+	  align-items: start;
+	  gap:30%;
+    li {
+      width: calc((100% - 30%) / 2);
+	    margin-bottom: 1rem;
+	    z-index:1;
+    }
+    li:nth-child(even){
+      margin-top:20%;
+    }
+  }
 }

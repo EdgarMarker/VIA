@@ -80,6 +80,7 @@
                 width: 100%;
                 position: relative;
                 .dot{
+                    cursor: pointer;
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -328,6 +329,9 @@
     .swiper-button-prev:hover{
         transform: rotate(180deg);
     }
+    .swiper-pagination{
+        bottom: -5px;
+    }
     .swiper-pagination-bullet{
         background-color: var(--color-primary);
     }
@@ -335,7 +339,8 @@
         display: flex;
         margin-top: 8px;
         svg{
-            width: 20px;
+            width: 10%;
+            aspect-ratio: 1;
             path{
                 fill: var(--color-primary);
             }

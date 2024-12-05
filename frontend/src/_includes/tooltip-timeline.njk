@@ -1,7 +1,7 @@
 <div class="tooltip">
-  {% if item.mainImage%}
+  {% if proyecto.mainImage%}
   <picture>
-    {% for format, images in item.mainImage %}
+    {% for format, images in proyecto.mainImage %}
     <source
       srcset="{{ images | srcset }}"
       sizes="(max-width: 1200px) 100vw, 1200px"
@@ -9,8 +9,8 @@
     />
     {% endfor %}
     <img
-      src="{{ item.mainImage.jpeg[0].url }}"
-      alt="{{ item.mainImage.Alt }}"
+      src="{{ proyecto.mainImage.jpeg[0].url }}"
+      alt="{{ proyecto.mainImage.Alt }}"
     />
   </picture>
   {% endif %}

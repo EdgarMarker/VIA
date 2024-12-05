@@ -1,72 +1,28 @@
 #section__hero{
-    background-color: var(--color-secondary);
-    padding-top: calc(60px + 5%);
-    h1{
-        color: var(--color-accent);
-    }
-    h2{
-        color: var(--color-white);
-    }
-    h2 strong{
-        color: var(--color-primary-light);
-        font-weight: unset;
-    }
-    p{
-        color: var(--color-white);
-        font-size: var(--size-md);
-    }
-}
-
-#section__intro .col__left{
-    padding-right: 15%;
-}
-
-form{
-    width: 100%;
     padding: 5%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    column-gap: 30px;
-    row-gap: 20px;
-    grid-auto-rows: auto;
+    padding-top: calc(60px + 5%);
+    .column__1{
+        align-items: center;
+    }
+    h1{
+        color: var(--color-secondary);
+        font-size: var(--size-3xl);
+        font-weight: 700;
+    }
 }
 
-form > div:nth-child(5){
-    grid-column: 2 span;
+#section__form{
+    padding: 0 5%;
+    padding-bottom: 5%;
+    .column__1{
+        align-items: center;
+        form{
+            max-width: 600px;
+        }
+    }
 }
 
-label{
-    margin-bottom: 5px;
-    font-size: var(--size-sm);
-}
 
-input{
-    outline: none;
-    border: 1px solid rgba(0,0,0,0.2);
-    font-size: var(--size-sm);
-    padding: 8px 10px;
-    width: 100%;
-    background-color: #fff;
-}
-
-textarea{
-    outline: none;
-    border: 1px solid rgba(0,0,0,0.2);
-    font-size: 18px;
-    padding: 8px 10px;
-    width: 100%;
-    background-color: #fff;
-}
-
-input:focus, textarea:focus{
-    border-color: var(--color-primary-light);
-}
-
-form button{
-    grid-column: 2 span;
-    margin: 0 auto;
-}
 
 
 

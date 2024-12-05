@@ -74,7 +74,12 @@ module.exports = async function () {
     timeline{
        list[]->{ 
         title,
-        publishedAt
+        publishedAt,
+        year,
+        mainImage{
+          "media": asset->{url},
+          "alt": asset->{altText}
+        }
       }
     }, 
     recentProdRef{
