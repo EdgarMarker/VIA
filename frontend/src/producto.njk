@@ -42,7 +42,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
     </div>
   </section>
 
-  <section id="section__main__image">
+  <section id="section__main__image" >
     <div class="column__1">
       {% if producto.mainImage %}
       <picture>
@@ -62,7 +62,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
     </div>
   </section>
 
-  <section id="home_twinImg">
+  <section id="home_twinImg" class="fadeInOut">
     <div class="column__2">
       <div class="col__left">
         {% if producto.twinDivisor.img1 %}
@@ -112,7 +112,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
       </div>
     </div>
   </section>
-  <section id="home_divisor">
+  <section id="home_divisor" class="fadeInOut">
     <div class="column__1">
       {% if producto.divisor %}
         <picture>
@@ -154,7 +154,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
     </div>
   </section>
 
-  <section id="product__amenities" class="pad__tb__5 pad__lr__10">
+  <section id="product__amenities" class="pad__tb__5 pad__lr__10 fadeInOut">
     <h2 class="width__100">Amenidades VIA</h2>
     <div class="amenity__desc">{{ producto.amenities.desc | safe }}</div>
     <div class="column__1 pad__all__5">
@@ -194,7 +194,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
         aria-label="Splide Basic HTML Example"
         role="group"
       >
-        <div class="splide__track">
+        <div class="splide__track fadeInOut">
           <ul class="splide__list">
             {% for item in producto.gallery.list %}
             <li class="splide__slide">
@@ -254,7 +254,6 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
   document.addEventListener("DOMContentLoaded", function () {
     var main = new Splide("#main-carousel", {
       type: "fade",
-      height: "70vh",
       rewind: true,
       pagination: false,
       arrows: true,

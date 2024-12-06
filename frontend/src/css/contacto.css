@@ -6,8 +6,10 @@
     }
     h1{
         color: var(--color-secondary);
-        font-size: var(--size-3xl);
+        font-size: var(--size-2xl);
         font-weight: 700;
+        max-width: 40%;
+        text-align: center;
     }
 }
 
@@ -17,7 +19,7 @@
     .column__1{
         align-items: center;
         form{
-            max-width: 600px;
+            max-width: 50%;
         }
     }
 }
