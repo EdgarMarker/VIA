@@ -107,4 +107,32 @@ function gsapSoloAnimations() {
       ...triggerOptions,
     },
   });
+
+  //Hero image move
+  const img1 = document.querySelector('.wrapper__shape__hero');
+  const img2 = document.querySelector('.secondary__img');
+  const heroTriggerOption = {
+    trigger: '#section__hero',
+    start: 'top 20%',
+    end: '70% 20%',
+    scrub: true,
+    markers: true,
+  }
+
+  gsap.from(img1, {
+    x: '-50px',
+    scrollTrigger: {
+      ...heroTriggerOption,
+    }
+  })
+
+  gsap.from(img2, {
+    x: '50px',
+    scrollTrigger: {
+      ...heroTriggerOption,
+    }
+  })
+
+  
+  
 }

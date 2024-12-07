@@ -93,7 +93,7 @@ h1{
     }
 }
 #home_descGeneral{
-    padding: 5%;
+    padding: 5%;    
     .column__2{
         .col__left{
             padding-right: 10%;
@@ -120,6 +120,7 @@ h1{
 }
 
 #product__location{
+    padding: 5%;
     #map-container-product{
         width: 100%;
         aspect-ratio: 1/1;
@@ -128,11 +129,13 @@ h1{
 
 #product__amenities{
     background-color: var(--color-primary);
+    padding: 5%;
     .amenity__desc{
         max-width: 500px;
         align-self: flex-start;
     }
     ul{
+        padding: 5% 0;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -141,6 +144,7 @@ h1{
             width: 100%;
             align-items: center;
             picture{
+                padding: 10px;
                 position: relative;
                 aspect-ratio: 1/1;
                 max-width: 100px;
@@ -153,7 +157,7 @@ h1{
                     display: absolute;
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
                     object-position: center;
                 }
             }
@@ -195,11 +199,15 @@ h1{
 }
 
 #product__gallery{
+    padding: 5%;
     .btn{
         margin-top: 2em;
     }
 }
 @media screen and (max-width: 1024px) { 
+    #section__hero{
+        padding-top: 15%;
+    }
     #home_twinImg{
         .column__2{
             gap: 2vh;
@@ -210,6 +218,13 @@ h1{
     }
     #product__amenities ul{
         grid-template-columns: repeat(3, 1fr);
+    }
+    #home_descGeneral {
+        & .column__2 {
+            .col__right {
+                padding-left: 0%;
+            }
+        }
     }   
 }
 

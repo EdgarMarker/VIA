@@ -553,7 +553,7 @@ section{
     height: 100%;
     opacity: 0.25;
     background: transparent;
-    background: radial-gradient(circle, #f5f5f3 0%, #1E282F 100%);;
+    background: radial-gradient(circle, #f5f5f3 0%, #1E282F 100%);
     z-index: 2;
 }
 
@@ -614,7 +614,7 @@ form button{
     min-height: 60vh;
     h2{
         font-weight: 600;
-        color: var(--color-error)
+        color: var(--color-error);
     }
     h1{
         font-weight: 500;
@@ -658,7 +658,6 @@ form button{
 
 /*  Tableta  */
 @media only screen and (max-width: 1024px) {
-
     
     .column__2{
         flex-direction: column;
@@ -712,13 +711,7 @@ form button{
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
     }
-    
-    
-
 }
-
-
-
 
 
 
@@ -755,6 +748,4 @@ form button{
         column-gap: 0px;
         row-gap: 30px;
     }
-
-
 }

@@ -17,15 +17,14 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
   data-css="producto"
   data-js="producto"
 >
-
   <section id="section__hero" class="pad__lr__5 pad__top__10">
     <div class="column__2">
       <div class="col__left">
         <span class="categoria_producto">
           <a href="/desarrollos/">Desarrollos / </a>
           <a
-          href="/desarrollos/{{ producto.categories | slugify }}"
-          >{{ producto.categories | join(", ") }}</a
+            href="/desarrollos/{{ producto.categories | slugify }}"
+            >{{ producto.categories | join(", ") }}</a
           >
         </span>
         <h1>{{ producto.title }}</h1>
@@ -42,7 +41,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
     </div>
   </section>
 
-  <section id="section__main__image" >
+  <section id="section__main__image">
     <div class="column__1">
       {% if producto.mainImage %}
       <picture>
@@ -101,7 +100,7 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
     </div>
   </section>
   <section id="home_descGeneral" class="fadeInOut">
-    <div class="column__2 pad__tb__5 pad__lr__5">
+    <div class="column__2">
       <div class="col__left">
         <h2>{{ producto.general.h2 }}</h2>
         <a class="btn btn--down" id="toOurMethod">Descargar Brochure |</a>
@@ -115,23 +114,24 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
   <section id="home_divisor" class="fadeInOut">
     <div class="column__1">
       {% if producto.divisor %}
-        <picture>
-          {% for format, images in producto.divisor %}
-          <source
-            srcset="{{ images | srcset }}"
-            sizes="(max-width: 1200px) 100vw, 1200px"
-            type="image/{{ format }}"
-          />
-          {% endfor %}
-          <img
-            src="{{ producto.divisor.jpeg[0].url }}"
-            alt="{{ producto.divisor.altText }}"
-          />
-        </picture>
-        {% endif %}
+      <picture>
+        {% for format, images in producto.divisor %}
+        <source
+          srcset="{{ images | srcset }}"
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          type="image/{{ format }}"
+        />
+        {% endfor %}
+        <img
+          src="{{ producto.divisor.jpeg[0].url }}"
+          alt="{{ producto.divisor.altText }}"
+        />
+      </picture>
+      {% endif %}
     </div>
   </section>
-  <section id="product__location" class="pad__tb__5 pad__lr__10">
+
+  <section id="product__location" class="fadeInOut">
     <h2 class="width__100">Ubicación</h2>
     <div class="column__2">
       <div class="col__left pad__right__5">
@@ -154,38 +154,26 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
     </div>
   </section>
 
-  <section id="product__amenities" class="pad__tb__5 pad__lr__10 fadeInOut">
+  <section id="product__amenities" class="fadeInOut">
     <h2 class="width__100">Amenidades VIA</h2>
     <div class="amenity__desc">{{ producto.amenities.desc | safe }}</div>
-    <div class="column__1 pad__all__5">
+    <div class="column__1">
       <ul role="list">
         {% for item in producto.amenities.list %}
         <li class="amenities__card flex flex-col">
           <p>
             {{ item.name }}
           </p>
-          {% if item.img %}
           <picture>
-            {% for format, images in item.img %}
-            <source
-              srcset="{{ images | srcset }}"
-              sizes="(max-width: 900px) 100vw, 900px"
-              type="image/{{ format }}"
-            />
-            {% endfor %}
-            <img
-              src="{{ item.img.jpeg[0].url }}"
-              alt="{{ item.img.altText }}"
-            />
+            <img src="{{ item.img.url }}" alt="" />
           </picture>
-          {% endif %}
         </li>
         {% endfor %}
       </ul>
     </div>
   </section>
 
-  <section id="product__gallery" class="pad__tb__5 pad__lr__10">
+  <section id="product__gallery">
     <h2 class="width__100">Galería</h2>
     <div class="column__1">
       <div
@@ -240,7 +228,9 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
         </div>
       </div>
     </div>
-    <a href="{{ producto.pageIntro.linkWeb }}" class="btn btn--right">Visitar sitio web</a>
+    <a href="{{ producto.pageIntro.linkWeb }}" class="btn btn--right"
+      >Visitar sitio web</a
+    >
   </section>
 </div>
 

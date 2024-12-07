@@ -1,4 +1,4 @@
-const client = require("../utils/sanityClient");
+ const client = require("../utils/sanityClient");
 const processContent = require("../utils/contentProcessor");
 
 module.exports = async function () {
