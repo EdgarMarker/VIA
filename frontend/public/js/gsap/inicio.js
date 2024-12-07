@@ -116,7 +116,6 @@ function gsapSoloAnimations() {
     start: 'top 20%',
     end: '70% 20%',
     scrub: true,
-    markers: true,
   }
 
   gsap.from(img1, {
