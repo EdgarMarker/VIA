@@ -159,21 +159,60 @@ ol:where([role="list"]) {
     cursor: pointer;
 }
 
-.btn--down, .btn--right{
+.btn--down{
+    background-color: var(--color-accent);
+    padding: 8px 20px;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: var(--size-xs);
+    cursor: pointer;
     &::after{
-        content: "";
+        content:"";
+        background-image: url("../../assets/svg/arrow-black-v2.svg");
         display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-top: 2px solid var(--color-black);
-        border-right: 2px solid var(--color-black);
-        transform: rotate(45deg);
+        width: calc(1em + 10px);
+        height: 1em;
         margin-left: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        vertical-align: middle;
+        border-left: 1px solid var(--color-secondary);
     }
 }
-.btn--down::after{
-    border-top: none;
-    border-bottom: 2px solid var(--color-black);
+.btn--right{
+    background-color: var(--color-accent);
+    padding: 8px 20px;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: var(--size-xs);
+    cursor: pointer;
+    &::after{
+        content:"";
+        background-image: url("../../assets/svg/arrow-black-right.svg");
+        display: inline-block;
+        width: calc(1em + 10px);
+        height: 1em;
+        margin-left: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        vertical-align: middle;
+        border-left: 1px solid var(--color-secondary);
+    }
+}
+.indicador{
+    text-transform: uppercase;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    span{
+        color: var(--color-primary);
+    }
 }
 /*  Layout globals  */
 
@@ -430,7 +469,7 @@ section{
         font-size: var(--size-lg);
     }
     picture, img{
-        width: 100%;
+        object-fit: cover;
         height: 100%;
     }
     .btn{

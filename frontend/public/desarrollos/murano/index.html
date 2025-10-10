@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> | </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    
+    <meta property="”og:type”" content="website" />
+    <meta property="”og:title”" content="" />
+    <meta property="”og:description”" content="" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/general/reset.css" />
+    <link rel="stylesheet" href="/css/general/globals.css" />
+    <link rel="stylesheet" href="/css/general/nav.css" />
+    <link rel="stylesheet" href="/css/general/footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     
+  </head>
+  <body data-barba="wrapper">
+    <div id="overlay">
+    <div id="progstat"></div>
+    <div id="progress"></div>
+    <div id="progress__bg"></div>
+    <div id="logoloader">
+        <img src="/images/sello.svg" height="50" />
+    </div>
+</div>
+<div class="transition__top"></div>
+<div class="transition__bottom"></div> <header id="header">
+    
+    <div id="inner__header">
+        <a id="logo__main" href="/">
+            <img src="https://cdn.sanity.io/images/69w89h1k/production/b71a393d54467badef7d0fb88722cc55c1d1b243-164x67.svg" alt=" - " />
+        </a>
+
+        <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/nosotros/"
+      class=""
+    >
+      Nosotros
+    </a>
+    
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
+    
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/en-proceso"
+          class=""
+        >
+          En proceso
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/articulos/1/"
+      class=""
+    >
+      Blog
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class=""
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
+</ul>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+
+        <a class="cta__msn" href="https://wa.me/521" target="_blank">Agendar Llamada</a>
+        
+        <div id="mobile__trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <div id="mobile__menu">
+        <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/nosotros/"
+      class=""
+    >
+      Nosotros
+    </a>
+    
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
+    
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/en-proceso"
+          class=""
+        >
+          En proceso
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/articulos/1/"
+      class=""
+    >
+      Blog
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class=""
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
+</ul>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+        <a class="cta__msn" href="https://wa.me/521" target="_blank">Agendar Llamada</a>
+    </div>
+    <div id="mobile__active"></div>
+    
+</header>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main id="main">
+          
+<div
+  data-barba="container"
+  data-barba-namespace="producto"
+  data-css="producto"
+  data-js="producto"
+>
+  <section id="section__hero" class="pad__lr__5 pad__top__10">
+    <div class="column__2">
+      <div class="col__left">
+        <span class="categoria_producto">
+          <a href="/desarrollos/">Desarrollos / </a>
+          <a
+            href="/desarrollos/departamentos"
+            >departamentos</a
+          >
+        </span>
+        <h1>Murano</h1>
+        <span class="categoria_producto">
+          0
+        </span>
+      </div>
+      <div class="col__right">
+        <p>0</p>
+        <a href="0" class="btn btn--right"
+          >Visitar sitio web</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section id="section__main__image">
+    <div class="column__1">
+      
+      <picture>
+        
+        <source
+          srcset="/images/r19RKcl6aa-300.jpeg 300w, /images/r19RKcl6aa-600.jpeg 600w, /images/r19RKcl6aa-900.jpeg 900w, /images/r19RKcl6aa-1200.jpeg 1200w, /images/r19RKcl6aa-1800.jpeg 1800w"
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          type="image/jpeg"
+        />
+        
+        <source
+          srcset="/images/r19RKcl6aa-300.webp 300w, /images/r19RKcl6aa-600.webp 600w, /images/r19RKcl6aa-900.webp 900w, /images/r19RKcl6aa-1200.webp 1200w, /images/r19RKcl6aa-1800.webp 1800w"
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          type="image/webp"
+        />
+        
+        <img
+          src="/images/r19RKcl6aa-300.jpeg"
+          alt=""
+        />
+      </picture>
+      
+    </div>
+  </section>
+
+  <section id="home_twinImg" class="fadeInOut">
+    <div class="column__2">
+      <div class="col__left">
+        
+      </div>
+      <div class="col__right">
+        
+      </div>
+    </div>
+  </section>
+  <section id="home_descGeneral" class="fadeInOut">
+    <div class="column__2">
+      <div class="col__left">
+        <h2>0</h2>
+        <a class="btn btn--down" id="toOurMethod">Descargar Brochure |</a>
+      </div>
+      <div class="col__right">
+        <p>0</p>
+        <p>0</p>
+      </div>
+    </div>
+  </section>
+  <section id="home_divisor" class="fadeInOut">
+    <div class="column__1">
+      
+    </div>
+  </section>
+
+  <section id="product__location" class="fadeInOut">
+    <h2 class="width__100">Ubicación</h2>
+    <div class="column__2">
+      <div class="col__left pad__right__5">
+        <div>
+          <p>0</p>
+        </div>
+        <a
+          href="0"
+          target="_blank"
+          class="btn btn--right"
+          >Abrir en Google Maps</a
+        >
+      </div>
+      <div class="col__right">
+        <div
+          id="map-container-product"
+          data-map-iframe-product="0"
+        ></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="product__amenities" class="fadeInOut">
+    <h2 class="width__100">Amenidades VIA</h2>
+    <div class="amenity__desc"><p>0</p></div>
+    <div class="column__1">
+      <ul role="list">
+        
+      </ul>
+    </div>
+  </section>
+
+  <section id="product__gallery">
+    <h2 class="width__100">Galería</h2>
+    <div class="column__1">
+      <div
+        id="main-carousel"
+        class="splide"
+        aria-label="Splide Basic HTML Example"
+        role="group"
+      >
+        <div class="splide__track fadeInOut">
+          <ul class="splide__list">
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/28udNtjYJ6-300.jpeg 300w, /images/28udNtjYJ6-600.jpeg 600w, /images/28udNtjYJ6-900.jpeg 900w, /images/28udNtjYJ6-1200.jpeg 1200w, /images/28udNtjYJ6-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/28udNtjYJ6-300.webp 300w, /images/28udNtjYJ6-600.webp 600w, /images/28udNtjYJ6-900.webp 900w, /images/28udNtjYJ6-1200.webp 1200w, /images/28udNtjYJ6-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/28udNtjYJ6-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/fJ3-ZTTTAi-300.jpeg 300w, /images/fJ3-ZTTTAi-600.jpeg 600w, /images/fJ3-ZTTTAi-900.jpeg 900w, /images/fJ3-ZTTTAi-1200.jpeg 1200w, /images/fJ3-ZTTTAi-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/fJ3-ZTTTAi-300.webp 300w, /images/fJ3-ZTTTAi-600.webp 600w, /images/fJ3-ZTTTAi-900.webp 900w, /images/fJ3-ZTTTAi-1200.webp 1200w, /images/fJ3-ZTTTAi-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/fJ3-ZTTTAi-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/hn_bbKHmwr-300.jpeg 300w, /images/hn_bbKHmwr-600.jpeg 600w, /images/hn_bbKHmwr-900.jpeg 900w, /images/hn_bbKHmwr-1200.jpeg 1200w, /images/hn_bbKHmwr-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/hn_bbKHmwr-300.webp 300w, /images/hn_bbKHmwr-600.webp 600w, /images/hn_bbKHmwr-900.webp 900w, /images/hn_bbKHmwr-1200.webp 1200w, /images/hn_bbKHmwr-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/hn_bbKHmwr-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/eH67-_0eeK-300.jpeg 300w, /images/eH67-_0eeK-600.jpeg 600w, /images/eH67-_0eeK-900.jpeg 900w, /images/eH67-_0eeK-1200.jpeg 1200w, /images/eH67-_0eeK-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/eH67-_0eeK-300.webp 300w, /images/eH67-_0eeK-600.webp 600w, /images/eH67-_0eeK-900.webp 900w, /images/eH67-_0eeK-1200.webp 1200w, /images/eH67-_0eeK-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/eH67-_0eeK-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/R34ttOzaat-300.jpeg 300w, /images/R34ttOzaat-600.jpeg 600w, /images/R34ttOzaat-900.jpeg 900w, /images/R34ttOzaat-1200.jpeg 1200w, /images/R34ttOzaat-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/R34ttOzaat-300.webp 300w, /images/R34ttOzaat-600.webp 600w, /images/R34ttOzaat-900.webp 900w, /images/R34ttOzaat-1200.webp 1200w, /images/R34ttOzaat-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/R34ttOzaat-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/VXihjEelmE-300.jpeg 300w, /images/VXihjEelmE-600.jpeg 600w, /images/VXihjEelmE-900.jpeg 900w, /images/VXihjEelmE-1200.jpeg 1200w, /images/VXihjEelmE-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/VXihjEelmE-300.webp 300w, /images/VXihjEelmE-600.webp 600w, /images/VXihjEelmE-900.webp 900w, /images/VXihjEelmE-1200.webp 1200w, /images/VXihjEelmE-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/VXihjEelmE-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/R-v6Br_tEC-300.jpeg 300w, /images/R-v6Br_tEC-600.jpeg 600w, /images/R-v6Br_tEC-900.jpeg 900w, /images/R-v6Br_tEC-1200.jpeg 1200w, /images/R-v6Br_tEC-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/R-v6Br_tEC-300.webp 300w, /images/R-v6Br_tEC-600.webp 600w, /images/R-v6Br_tEC-900.webp 900w, /images/R-v6Br_tEC-1200.webp 1200w, /images/R-v6Br_tEC-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/R-v6Br_tEC-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/tQoYeQ3GJl-300.jpeg 300w, /images/tQoYeQ3GJl-600.jpeg 600w, /images/tQoYeQ3GJl-900.jpeg 900w, /images/tQoYeQ3GJl-1200.jpeg 1200w, /images/tQoYeQ3GJl-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/tQoYeQ3GJl-300.webp 300w, /images/tQoYeQ3GJl-600.webp 600w, /images/tQoYeQ3GJl-900.webp 900w, /images/tQoYeQ3GJl-1200.webp 1200w, /images/tQoYeQ3GJl-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/tQoYeQ3GJl-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/aQ1pi4Cmus-300.jpeg 300w, /images/aQ1pi4Cmus-600.jpeg 600w, /images/aQ1pi4Cmus-900.jpeg 900w, /images/aQ1pi4Cmus-1200.jpeg 1200w, /images/aQ1pi4Cmus-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/aQ1pi4Cmus-300.webp 300w, /images/aQ1pi4Cmus-600.webp 600w, /images/aQ1pi4Cmus-900.webp 900w, /images/aQ1pi4Cmus-1200.webp 1200w, /images/aQ1pi4Cmus-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/aQ1pi4Cmus-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/kdcXrEZVOJ-300.jpeg 300w, /images/kdcXrEZVOJ-600.jpeg 600w, /images/kdcXrEZVOJ-900.jpeg 900w, /images/kdcXrEZVOJ-1200.jpeg 1200w, /images/kdcXrEZVOJ-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/kdcXrEZVOJ-300.webp 300w, /images/kdcXrEZVOJ-600.webp 600w, /images/kdcXrEZVOJ-900.webp 900w, /images/kdcXrEZVOJ-1200.webp 1200w, /images/kdcXrEZVOJ-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/kdcXrEZVOJ-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div
+        id="thumbnail-carousel"
+        class="splide"
+        aria-label="Splide Basic HTML Example"
+        role="group"
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/28udNtjYJ6-300.jpeg 300w, /images/28udNtjYJ6-600.jpeg 600w, /images/28udNtjYJ6-900.jpeg 900w, /images/28udNtjYJ6-1200.jpeg 1200w, /images/28udNtjYJ6-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/28udNtjYJ6-300.webp 300w, /images/28udNtjYJ6-600.webp 600w, /images/28udNtjYJ6-900.webp 900w, /images/28udNtjYJ6-1200.webp 1200w, /images/28udNtjYJ6-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/28udNtjYJ6-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/fJ3-ZTTTAi-300.jpeg 300w, /images/fJ3-ZTTTAi-600.jpeg 600w, /images/fJ3-ZTTTAi-900.jpeg 900w, /images/fJ3-ZTTTAi-1200.jpeg 1200w, /images/fJ3-ZTTTAi-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/fJ3-ZTTTAi-300.webp 300w, /images/fJ3-ZTTTAi-600.webp 600w, /images/fJ3-ZTTTAi-900.webp 900w, /images/fJ3-ZTTTAi-1200.webp 1200w, /images/fJ3-ZTTTAi-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/fJ3-ZTTTAi-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/hn_bbKHmwr-300.jpeg 300w, /images/hn_bbKHmwr-600.jpeg 600w, /images/hn_bbKHmwr-900.jpeg 900w, /images/hn_bbKHmwr-1200.jpeg 1200w, /images/hn_bbKHmwr-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/hn_bbKHmwr-300.webp 300w, /images/hn_bbKHmwr-600.webp 600w, /images/hn_bbKHmwr-900.webp 900w, /images/hn_bbKHmwr-1200.webp 1200w, /images/hn_bbKHmwr-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/hn_bbKHmwr-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/eH67-_0eeK-300.jpeg 300w, /images/eH67-_0eeK-600.jpeg 600w, /images/eH67-_0eeK-900.jpeg 900w, /images/eH67-_0eeK-1200.jpeg 1200w, /images/eH67-_0eeK-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/eH67-_0eeK-300.webp 300w, /images/eH67-_0eeK-600.webp 600w, /images/eH67-_0eeK-900.webp 900w, /images/eH67-_0eeK-1200.webp 1200w, /images/eH67-_0eeK-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/eH67-_0eeK-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/R34ttOzaat-300.jpeg 300w, /images/R34ttOzaat-600.jpeg 600w, /images/R34ttOzaat-900.jpeg 900w, /images/R34ttOzaat-1200.jpeg 1200w, /images/R34ttOzaat-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/R34ttOzaat-300.webp 300w, /images/R34ttOzaat-600.webp 600w, /images/R34ttOzaat-900.webp 900w, /images/R34ttOzaat-1200.webp 1200w, /images/R34ttOzaat-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/R34ttOzaat-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/VXihjEelmE-300.jpeg 300w, /images/VXihjEelmE-600.jpeg 600w, /images/VXihjEelmE-900.jpeg 900w, /images/VXihjEelmE-1200.jpeg 1200w, /images/VXihjEelmE-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/VXihjEelmE-300.webp 300w, /images/VXihjEelmE-600.webp 600w, /images/VXihjEelmE-900.webp 900w, /images/VXihjEelmE-1200.webp 1200w, /images/VXihjEelmE-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/VXihjEelmE-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/R-v6Br_tEC-300.jpeg 300w, /images/R-v6Br_tEC-600.jpeg 600w, /images/R-v6Br_tEC-900.jpeg 900w, /images/R-v6Br_tEC-1200.jpeg 1200w, /images/R-v6Br_tEC-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/R-v6Br_tEC-300.webp 300w, /images/R-v6Br_tEC-600.webp 600w, /images/R-v6Br_tEC-900.webp 900w, /images/R-v6Br_tEC-1200.webp 1200w, /images/R-v6Br_tEC-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/R-v6Br_tEC-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/tQoYeQ3GJl-300.jpeg 300w, /images/tQoYeQ3GJl-600.jpeg 600w, /images/tQoYeQ3GJl-900.jpeg 900w, /images/tQoYeQ3GJl-1200.jpeg 1200w, /images/tQoYeQ3GJl-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/tQoYeQ3GJl-300.webp 300w, /images/tQoYeQ3GJl-600.webp 600w, /images/tQoYeQ3GJl-900.webp 900w, /images/tQoYeQ3GJl-1200.webp 1200w, /images/tQoYeQ3GJl-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/tQoYeQ3GJl-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/aQ1pi4Cmus-300.jpeg 300w, /images/aQ1pi4Cmus-600.jpeg 600w, /images/aQ1pi4Cmus-900.jpeg 900w, /images/aQ1pi4Cmus-1200.jpeg 1200w, /images/aQ1pi4Cmus-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/aQ1pi4Cmus-300.webp 300w, /images/aQ1pi4Cmus-600.webp 600w, /images/aQ1pi4Cmus-900.webp 900w, /images/aQ1pi4Cmus-1200.webp 1200w, /images/aQ1pi4Cmus-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/aQ1pi4Cmus-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+            <li class="splide__slide">
+              <picture>
+                
+                <source
+                  srcset="/images/kdcXrEZVOJ-300.jpeg 300w, /images/kdcXrEZVOJ-600.jpeg 600w, /images/kdcXrEZVOJ-900.jpeg 900w, /images/kdcXrEZVOJ-1200.jpeg 1200w, /images/kdcXrEZVOJ-1800.jpeg 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/jpeg"
+                />
+                
+                <source
+                  srcset="/images/kdcXrEZVOJ-300.webp 300w, /images/kdcXrEZVOJ-600.webp 600w, /images/kdcXrEZVOJ-900.webp 900w, /images/kdcXrEZVOJ-1200.webp 1200w, /images/kdcXrEZVOJ-1800.webp 1800w"
+                  sizes="(max-width: 1200px) 100vw, 1200px"
+                  type="image/webp"
+                />
+                
+                <img src="/images/kdcXrEZVOJ-300.jpeg" alt="" />
+              </picture>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="" class="btn btn--right"
+      >Visitar sitio web</a
+    >
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+/>
+<script>
+  // carrousel
+  document.addEventListener("DOMContentLoaded", function () {
+    var main = new Splide("#main-carousel", {
+      type: "fade",
+      rewind: true,
+      pagination: false,
+      arrows: true,
+    });
+    var thumbnails = new Splide("#thumbnail-carousel", {
+      fixedWidth: 100,
+      fixedHeight: 60,
+      gap: 10,
+      rewind: true,
+      pagination: false,
+      isNavigation: true,
+      arrows: false,
+    });
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+  });
+  console.log(data);
+  // get color
+  const containerIcon = document.getElementById("hero-logo-product-container");
+  const color = containerIcon.getAttribute("data-color");
+  containerIcon.style.backgroundColor = color;
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mapContainer = document.getElementById("map-container-product");
+    const iframeString = mapContainer.getAttribute("data-map-iframe-product");
+    if (iframeString) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(iframeString, "text/html");
+      const iframe = doc.querySelector("iframe");
+      if (iframe) {
+        // Create a new iframe and copy attributes
+        const newIframe = document.createElement("iframe");
+        Array.from(iframe.attributes).forEach((attr) => {
+          newIframe.setAttribute(attr.name, attr.value);
+        });
+        // Set desired attributes
+        newIframe.width = "100%";
+        newIframe.height = "100%";
+        newIframe.style.border = "0";
+        newIframe.allowFullscreen = true;
+        newIframe.loading = "lazy";
+        newIframe.referrerPolicy = "no-referrer-when-downgrade";
+        // Set title for accessibility
+        if (!newIframe.hasAttribute("title")) {
+          newIframe.title = "Google Maps";
+        }
+        mapContainer.appendChild(newIframe);
+      }
+    }
+  });
+</script>
+
+        </main>
+        <footer>
+    <div class="column__1 listado__x4">
+        <div class="footer__column">
+            <h2>Mapa del sitio</h2>
+            <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/nosotros/"
+      class=""
+    >
+      Nosotros
+    </a>
+    
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
+    
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/en-proceso"
+          class=""
+        >
+          En proceso
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/articulos/1/"
+      class=""
+    >
+      Blog
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class=""
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
+</ul>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+        </div>
+        <div class="footer__column">
+            <h2>Datos de contacto</h2>
+            <ul>
+                
+                <li>T: <a class="tel__text" href="tel:+521"></a></li>
+                <li>C: <a href="mailto:"></a></li>
+                <li><a href="" target="_blank"></a></li>
+                
+            </ul>
+        </div>
+        <div class="footer__column">
+            <h2>Síguenos</h2>
+            <ul>
+                
+            </ul>
+        </div>
+        <div class="footer__column">
+            
+                <a class="logo__footer" href="/">
+                    <img src="https://cdn.sanity.io/images/69w89h1k/production/b71a393d54467badef7d0fb88722cc55c1d1b243-164x67.svg" alt=" - " />
+                </a>
+            
+            
+        </div>
+    </div>
+    <div id="inner__footer" class="column__1">
+        <span>
+            
+                
+            
+            © Todos los derechos reservados | Sitio web creado por <a href="https://marker.com.mx" target="_blank">MARKER branding</a></span>
+    </div>
+</footer>
+<style>
+    .footer__column:first-child {
+        .nav__ul{
+            border: none;
+        }
+        .dropdown-list{
+            display: none;
+        }
+        .dropdown::after {
+            display: none;
+        }
+    }
+</style>
+      </div>
+    </div>
+
+    <script src="/js/loader.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@barba/css"></script>
+    <script src="/js/main.min.js"></script>
+    <script src="/js/base.js"></script>
+  </body>
+</html>

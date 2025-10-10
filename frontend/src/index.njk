@@ -22,7 +22,7 @@ permalink: "/{{ page.fileSlug }}/"
         <h1>{{ item.heroH1 }}</h1>
         <div>{{ item.heroH2 | safe }}</div>
         <p>{{ item.heroP }}</p>
-        <a class="btn btn--right btn__hero">{{ item.heroBtn }}  |</a>
+        <a class="btn--down">{{ item.heroBtn }}</a>
       </div>
       <div class="col__right width__55">
         <div class="secondary__img">
@@ -85,8 +85,9 @@ permalink: "/{{ page.fileSlug }}/"
   </section>
 
   <section id="section__intro" class="pad__all__5">
-    <h3 class="pad__lr__5">/Nuestra trayectoria</h3>
     <div class="column__1">
+      <h3 class="indicador"><span>/</span>inicio</h3>
+      <h2>nuestra trayectoria</h2>
       <div class="timeline" id="timeline">
         {% for proyecto in item.timeline.list %}
         <div class="item">
@@ -101,14 +102,16 @@ permalink: "/{{ page.fileSlug }}/"
         </div>
         {% endfor %}
       </div>
-     
+      <div class="container">
+        <a class="btn--right">más información</a>
+      </div>
     </div>
   </section>
 
   <section id="home_about_via" class="fadeInOut">
-    <h3 class="pad__lr__5">/Sobre VIA MX</h3>
-    <div class="column__2 pad__tb__5 pad__lr__5">
+    <div class="column__2">
       <div class="col__left">
+        <h3 class="indicador"><span>/</span>Sobre VIA MX</h3>
         <h2>{{ item.aboutVia.aboutViaH2 }}</h2>
       </div>
       <div class="col__right">
@@ -146,10 +149,10 @@ permalink: "/{{ page.fileSlug }}/"
   </section>
 
   <section id="home_wySelectUs" class="fadeInOut">
-    <div class="column__2 pad__tb__5 pad__lr__5">
+    <div class="column__2">
       <div class="col__left">
         <h2>{{ item.aboutVia.aboutViaH2 }}</h2>
-        <a class="btn btn--down" id="toOurMethod">Nuestra metodología |</a>
+        <a class="btn--down" id="toOurMethod">Nuestra metodología</a>
       </div>
       <div class="col__right">
         <p>{{ item.aboutVia.aboutViaRichText1 | safe }}</p>
@@ -158,9 +161,9 @@ permalink: "/{{ page.fileSlug }}/"
     </div>
   </section>
 
-  <section id="home_ourMethod" class="pad__lr__5 fadeInOut">
-    <h3>/Nuestra metodología</h3>
-    <div class="column__2 pad__tb__5">
+  <section id="home_ourMethod" class="fadeInOut">
+    <h3 class="indicador"><span>/</span>Nuestra metodología</h3>
+    <div class="column__2">
       <div class="col__left pad__right__10">
         <ul role="list">
           {% for list in item.ourMethod.ourMethodSteps %}
@@ -197,14 +200,13 @@ permalink: "/{{ page.fileSlug }}/"
   </section>
 
   <section id="home_testy" class="pad__lr__5 pad__tb__5 fadeInOut">
-    <h3>/Testimonios</h3>
+    <h3 class="indicador"><span>/</span>Testimonios</h3>
     <div class="column__2">
       <div class="col__left">
         <h2>{{ item.testy.testyH2 }}</h2>
       </div>
       <div class="col__right">
-
-        <div class="swiper testimonials-swiper max1200">
+        <div class="swiper testimonials-swiper">
           <div class="swiper-wrapper">
             {% for list in item.testy.testyList %}
             <!-- Slides -->
@@ -243,16 +245,16 @@ permalink: "/{{ page.fileSlug }}/"
           </div>
           {% endfor %}
         </div>
-        <div class="swiper-pagination"></div>
       </div>
-    </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
-  <section id="section__productos" class="pad__all__5">
+  <section id="section__productos">
     <div class="column__1">
+      <h3 class="indicador"><span>/</span>desarrollos destacados</h3>
       <h2>Productos destacados</h2>
       <ul
         role="list"
@@ -261,7 +263,34 @@ permalink: "/{{ page.fileSlug }}/"
         {% for item in item.recentProdRef.recentProducts %} {% include
         "producto-card.njk" %} {% endfor %}
       </ul>
-      <a href="/desarrollos" class="btn btn--right">Ver todos los proyectos | </a>
+    </div>
+    <a href="/desarrollos" class="btn--right">Ver todos los proyectos</a>
+  </section>
+
+  <section class="section__contact">
+    <div class="column__1">
+      <h3 class="indicador"><span>/</span>contacto</h3>
+      <h2>se parte de la experiencia <span>via</span></h2>
+    </div>
+    <div class="column__2">
+      <div class="col__left">
+        <ul class="data__wrapper">
+          <li class="telefono">
+            <h3>teléfono</h3>
+            <p>000 000 0000</p>
+          </li>
+          <li class="correo">
+            <h3>correo electrónico</h3>
+            <p>contacto@via.mx</p>
+          </li>
+          <li class="oficinas">
+            <h3>oficinas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="col__right"></div>
     </div>
   </section>
 

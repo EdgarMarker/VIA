@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> | </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    
+    <meta property="”og:type”" content="website" />
+    <meta property="”og:title”" content="" />
+    <meta property="”og:description”" content="" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/general/reset.css" />
+    <link rel="stylesheet" href="/css/general/globals.css" />
+    <link rel="stylesheet" href="/css/general/nav.css" />
+    <link rel="stylesheet" href="/css/general/footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     
+  </head>
+  <body data-barba="wrapper">
+    <div id="overlay">
+    <div id="progstat"></div>
+    <div id="progress"></div>
+    <div id="progress__bg"></div>
+    <div id="logoloader">
+        <img src="/images/sello.svg" height="50" />
+    </div>
+</div>
+<div class="transition__top"></div>
+<div class="transition__bottom"></div> <header id="header">
+    
+    <div id="inner__header">
+        <a id="logo__main" href="/">
+            <img src="https://cdn.sanity.io/images/69w89h1k/production/b71a393d54467badef7d0fb88722cc55c1d1b243-164x67.svg" alt=" - " />
+        </a>
+
+        <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/nosotros/"
+      class=""
+    >
+      Nosotros
+    </a>
+    
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
+    
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/en-proceso"
+          class=""
+        >
+          En proceso
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/articulos/1/"
+      class=""
+    >
+      Blog
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class=""
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
+</ul>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+
+        <a class="cta__msn" href="https://wa.me/521" target="_blank">Agendar Llamada</a>
+        
+        <div id="mobile__trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <div id="mobile__menu">
+        <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/nosotros/"
+      class=""
+    >
+      Nosotros
+    </a>
+    
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
+    
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/en-proceso"
+          class=""
+        >
+          En proceso
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/articulos/1/"
+      class=""
+    >
+      Blog
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class=""
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
+</ul>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+        <a class="cta__msn" href="https://wa.me/521" target="_blank">Agendar Llamada</a>
+    </div>
+    <div id="mobile__active"></div>
+    
+</header>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main id="main">
+          
+<div
+  data-barba="container"
+  data-barba-namespace="categoria-producto"
+  data-css="productos-category" 
+  data-js="productos">
+  
+  <section id="section__hero">
+  </section>
+
+  <section id="section__intro" class="pad__all__5">
+    <div class="column__1">
+      <h1>departamentos</h1>
+      <ul role="list" class="listado__x3 width__100">
+        
+        <li class="card card__producto">
+  
+  <a class="card__pic" href="/desarrollos/idalia-san-damian">
+    <picture>
+      
+      <source
+        srcset="/images/OZIDmI26o--300.jpeg 300w, /images/OZIDmI26o--600.jpeg 600w, /images/OZIDmI26o--900.jpeg 900w, /images/OZIDmI26o--1200.jpeg 1200w, /images/OZIDmI26o--1800.jpeg 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/jpeg"
+      />
+      
+      <source
+        srcset="/images/OZIDmI26o--300.webp 300w, /images/OZIDmI26o--600.webp 600w, /images/OZIDmI26o--900.webp 900w, /images/OZIDmI26o--1200.webp 1200w, /images/OZIDmI26o--1800.webp 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/webp"
+      />
+      
+      <img
+        src="/images/OZIDmI26o--300.jpeg"
+        alt=""
+      />
+    </picture>
+     
+    <span class="card__category">Sin categoría/</span>
+    
+    <h2>
+      <a href="/desarrollos/idalia-san-damian">Idalia San Damián</a>
+    </h2>
+    <a class="btn" href="/desarrollos/idalia-san-damian"
+      ></a
+    >
+  </div>
+</li>
+
+        
+        <li class="card card__producto">
+  
+  <a class="card__pic" href="/desarrollos/murano">
+    <picture>
+      
+      <source
+        srcset="/images/r19RKcl6aa-300.jpeg 300w, /images/r19RKcl6aa-600.jpeg 600w, /images/r19RKcl6aa-900.jpeg 900w, /images/r19RKcl6aa-1200.jpeg 1200w, /images/r19RKcl6aa-1800.jpeg 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/jpeg"
+      />
+      
+      <source
+        srcset="/images/r19RKcl6aa-300.webp 300w, /images/r19RKcl6aa-600.webp 600w, /images/r19RKcl6aa-900.webp 900w, /images/r19RKcl6aa-1200.webp 1200w, /images/r19RKcl6aa-1800.webp 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/webp"
+      />
+      
+      <img
+        src="/images/r19RKcl6aa-300.jpeg"
+        alt=""
+      />
+    </picture>
+     
+    <span class="card__category">Sin categoría/</span>
+    
+    <h2>
+      <a href="/desarrollos/murano">Murano</a>
+    </h2>
+    <a class="btn" href="/desarrollos/murano"
+      ></a
+    >
+  </div>
+</li>
+
+        
+        <li class="card card__producto">
+  
+  <a class="card__pic" href="/desarrollos/sodzil">
+    <picture>
+      
+      <source
+        srcset="/images/OZIDmI26o--300.jpeg 300w, /images/OZIDmI26o--600.jpeg 600w, /images/OZIDmI26o--900.jpeg 900w, /images/OZIDmI26o--1200.jpeg 1200w, /images/OZIDmI26o--1800.jpeg 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/jpeg"
+      />
+      
+      <source
+        srcset="/images/OZIDmI26o--300.webp 300w, /images/OZIDmI26o--600.webp 600w, /images/OZIDmI26o--900.webp 900w, /images/OZIDmI26o--1200.webp 1200w, /images/OZIDmI26o--1800.webp 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/webp"
+      />
+      
+      <img
+        src="/images/OZIDmI26o--300.jpeg"
+        alt=""
+      />
+    </picture>
+     
+    <span class="card__category">Sin categoría/</span>
+    
+    <h2>
+      <a href="/desarrollos/sodzil">Sodzil</a>
+    </h2>
+    <a class="btn" href="/desarrollos/sodzil"
+      ></a
+    >
+  </div>
+</li>
+
+        
+        <li class="card card__producto">
+  
+  <a class="card__pic" href="/desarrollos/solaris">
+    <picture>
+      
+      <source
+        srcset="/images/OZIDmI26o--300.jpeg 300w, /images/OZIDmI26o--600.jpeg 600w, /images/OZIDmI26o--900.jpeg 900w, /images/OZIDmI26o--1200.jpeg 1200w, /images/OZIDmI26o--1800.jpeg 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/jpeg"
+      />
+      
+      <source
+        srcset="/images/OZIDmI26o--300.webp 300w, /images/OZIDmI26o--600.webp 600w, /images/OZIDmI26o--900.webp 900w, /images/OZIDmI26o--1200.webp 1200w, /images/OZIDmI26o--1800.webp 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/webp"
+      />
+      
+      <img
+        src="/images/OZIDmI26o--300.jpeg"
+        alt=""
+      />
+    </picture>
+     
+    <span class="card__category">Sin categoría/</span>
+    
+    <h2>
+      <a href="/desarrollos/solaris">Solaris</a>
+    </h2>
+    <a class="btn" href="/desarrollos/solaris"
+      ></a
+    >
+  </div>
+</li>
+
+        
+        <li class="card card__producto">
+  
+  <a class="card__pic" href="/desarrollos/sublime">
+    <picture>
+      
+      <source
+        srcset="/images/JEixDn1ooX-300.jpeg 300w, /images/JEixDn1ooX-600.jpeg 600w, /images/JEixDn1ooX-900.jpeg 900w, /images/JEixDn1ooX-1200.jpeg 1200w, /images/JEixDn1ooX-1800.jpeg 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/jpeg"
+      />
+      
+      <source
+        srcset="/images/JEixDn1ooX-300.webp 300w, /images/JEixDn1ooX-600.webp 600w, /images/JEixDn1ooX-900.webp 900w, /images/JEixDn1ooX-1200.webp 1200w, /images/JEixDn1ooX-1800.webp 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/webp"
+      />
+      
+      <img
+        src="/images/JEixDn1ooX-300.jpeg"
+        alt=""
+      />
+    </picture>
+     
+    <span class="card__category">Sin categoría/</span>
+    
+    <h2>
+      <a href="/desarrollos/sublime">Sublime</a>
+    </h2>
+    <a class="btn" href="/desarrollos/sublime"
+      ></a
+    >
+  </div>
+</li>
+
+        
+        <li class="card card__producto">
+  
+  <a class="card__pic" href="/desarrollos/siena">
+    <picture>
+      
+      <source
+        srcset="/images/KFl_4s6Qqf-300.jpeg 300w, /images/KFl_4s6Qqf-600.jpeg 600w, /images/KFl_4s6Qqf-900.jpeg 900w, /images/KFl_4s6Qqf-1200.jpeg 1200w, /images/KFl_4s6Qqf-1800.jpeg 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/jpeg"
+      />
+      
+      <source
+        srcset="/images/KFl_4s6Qqf-300.webp 300w, /images/KFl_4s6Qqf-600.webp 600w, /images/KFl_4s6Qqf-900.webp 900w, /images/KFl_4s6Qqf-1200.webp 1200w, /images/KFl_4s6Qqf-1800.webp 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/webp"
+      />
+      
+      <img
+        src="/images/KFl_4s6Qqf-300.jpeg"
+        alt=""
+      />
+    </picture>
+     
+    <span class="card__category">Sin categoría/</span>
+    
+    <h2>
+      <a href="/desarrollos/siena">Siena</a>
+    </h2>
+    <a class="btn" href="/desarrollos/siena"
+      ></a
+    >
+  </div>
+</li>
+
+        
+        <li class="card card__producto">
+  
+  <a class="card__pic" href="/desarrollos/elysia">
+    <picture>
+      
+      <source
+        srcset="/images/OZIDmI26o--300.jpeg 300w, /images/OZIDmI26o--600.jpeg 600w, /images/OZIDmI26o--900.jpeg 900w, /images/OZIDmI26o--1200.jpeg 1200w, /images/OZIDmI26o--1800.jpeg 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/jpeg"
+      />
+      
+      <source
+        srcset="/images/OZIDmI26o--300.webp 300w, /images/OZIDmI26o--600.webp 600w, /images/OZIDmI26o--900.webp 900w, /images/OZIDmI26o--1200.webp 1200w, /images/OZIDmI26o--1800.webp 1800w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        type="image/webp"
+      />
+      
+      <img
+        src="/images/OZIDmI26o--300.jpeg"
+        alt=""
+      />
+    </picture>
+     
+    <span class="card__category">Sin categoría/</span>
+    
+    <h2>
+      <a href="/desarrollos/elysia">Elysia</a>
+    </h2>
+    <a class="btn" href="/desarrollos/elysia"
+      ></a
+    >
+  </div>
+</li>
+
+        
+      </ul>
+    </div>
+  </section>
+</div>
+
+        </main>
+        <footer>
+    <div class="column__1 listado__x4">
+        <div class="footer__column">
+            <h2>Mapa del sitio</h2>
+            <ul role="list" class="nav__ul">
+  
+  <li class="">
+    <a
+      href="/"
+      class=""
+    >
+      Inicio
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/nosotros/"
+      class=""
+    >
+      Nosotros
+    </a>
+    
+  </li>
+  
+  <li class="dropdown">
+    <a
+      href="/desarrollos/"
+      class=""
+    >
+      Desarrollos
+    </a>
+    
+    <ul class="dropdown-list">
+      
+      <li>
+        <a
+          href="/desarrollos/en-proceso"
+          class=""
+        >
+          En proceso
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="/desarrollos/terminado"
+          class=""
+        >
+          Terminado
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/invierte/"
+      class=""
+    >
+      Invierte
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/articulos/1/"
+      class=""
+    >
+      Blog
+    </a>
+    
+  </li>
+  
+  <li class="">
+    <a
+      href="/contacto/"
+      class=""
+    >
+      Contacto
+    </a>
+    
+  </li>
+  
+</ul>
+
+<style>
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    background-color: var(--color-secondary);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    li {
+      a {
+        font-size: var(--size-xs);
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url(/assets/svg/Arrow-white-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s;
+  }
+
+  .dropdown:hover .dropdown-list {
+    display: block;
+  }
+
+  .dropdown:hover::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  .nav__ul a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  .nav__ul a.active {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdown::after {
+      display: none;
+    }
+    .nav__ul {
+      border: none;
+    }
+  }
+</style>
+
+        </div>
+        <div class="footer__column">
+            <h2>Datos de contacto</h2>
+            <ul>
+                
+                <li>T: <a class="tel__text" href="tel:+521"></a></li>
+                <li>C: <a href="mailto:"></a></li>
+                <li><a href="" target="_blank"></a></li>
+                
+            </ul>
+        </div>
+        <div class="footer__column">
+            <h2>Síguenos</h2>
+            <ul>
+                
+            </ul>
+        </div>
+        <div class="footer__column">
+            
+                <a class="logo__footer" href="/">
+                    <img src="https://cdn.sanity.io/images/69w89h1k/production/b71a393d54467badef7d0fb88722cc55c1d1b243-164x67.svg" alt=" - " />
+                </a>
+            
+            
+        </div>
+    </div>
+    <div id="inner__footer" class="column__1">
+        <span>
+            
+                
+            
+            © Todos los derechos reservados | Sitio web creado por <a href="https://marker.com.mx" target="_blank">MARKER branding</a></span>
+    </div>
+</footer>
+<style>
+    .footer__column:first-child {
+        .nav__ul{
+            border: none;
+        }
+        .dropdown-list{
+            display: none;
+        }
+        .dropdown::after {
+            display: none;
+        }
+    }
+</style>
+      </div>
+    </div>
+
+    <script src="/js/loader.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@barba/css"></script>
+    <script src="/js/main.min.js"></script>
+    <script src="/js/base.js"></script>
+  </body>
+</html>
