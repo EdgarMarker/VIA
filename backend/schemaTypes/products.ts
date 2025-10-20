@@ -97,6 +97,12 @@ export default defineType({
       type: 'blockContent',
       group: 'product'
     }),
+    defineField({
+      name: 'colonia',
+      title: 'Colonia del desarrollo',
+      type: 'string',
+      group: 'product'
+    }),
     /* Page intro */
     defineField({
       name: 'hero',

@@ -21,10 +21,10 @@
   <div class="card__body">
     <span class="card__category">
       {% for category in item.categories %}
-      <a href="/desarrollos/{{ category | slugify }}"
+      <span>/ </span><a href="/desarrollos/{{ category | slugify }}"
         >{{ category }}{% if not loop.last %}, {% endif %}</a
       >
-      / {% endfor %}
+      {% endfor %}
     </span>
     {% else %}
     <span class="card__category">Sin categoría/</span>
@@ -32,8 +32,8 @@
     <h2>
       <a href="/desarrollos/{{ item.slug.current }}">{{ item.title }}</a>
     </h2>
-    <a class="btn" href="/desarrollos/{{ item.slug.current }}"
-      ></a
-    >
+    <h3>Ubicación: <span>{{item.colonia}}</span></h3>
+    <h3>Año: <span>{{item.year}}</span></h3>
+    <a class="btn btn--right" href="/desarrollos/{{ item.slug.current }}">Ir al proyecto</a>
   </div>
 </li>

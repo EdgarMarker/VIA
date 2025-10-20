@@ -15,16 +15,38 @@ permalink: "/{{ page.fileSlug }}/"
 >
   {% for item in nosotros %}
 
-  <section id="section__hero" class="pad__lr__5">
-    <div class="column__1">
-      <h1>{{ item.heroH1 }}</h1>
-      <div>{{ item.heroH2 | safe }}</div>
-      <a class="btn btn--right btn__hero">{{ item.heroBtn }}</a>
+  <section id="section__hero">
+    <div class="screenDisplayOverlay"></div>
+    <div class="column__2">
+      <div class="col__left">
+        <h1>{{ item.heroH1 }}</h1>
+        <div>{{ item.heroH2 | safe }}</div>
+        <a class="btn btn--down">{{ item.heroBtn }}</a>
+      </div>
+      <div class="col__right">
+        <div class="secondary__img">
+          <picture>
+            <img src="{{ '/assets/nosotros/nosotros_2.jpg' | url }}" alt="Nosotros">
+          </picture>
+        </div>
+        <div class="wrapper__shape__hero">
+          <div class="shape__hero">
+            <picture>
+              <img src="{{ '/assets/nosotros/nosotros_1.jpg' | url }}" alt="Nosotros">
+            </picture>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
+  <section id="section__commitment" class="fadeInOut">
+    <div class="column__1">
+      <h2>{{ item.commitment.desc | safe }}</h2>
+      <p> - equipo <span>via</span> desarrollos</p>
+    </div>
+  </section>
   <section id="section__intro">
-    <h3 class="width__100">/ Nosotros</h3>
+    <h3 class="indicador"><span>/</span>nosotros</h3>
     <div class="column__2">
       <div class="col__left">
         <h2>{{ item.general.weAreH2 | safe }}</h2>
@@ -34,79 +56,73 @@ permalink: "/{{ page.fileSlug }}/"
         <p>{{ item.general.weAreRichText2 | safe }}</p>
       </div>
     </div>
+  </section>
+  <section id="section__history">
+    <div class="screenDisplayOverlay"></div>
+    <h3 class="indicador"><span>/</span>nuestra historia</h3>
     <div class="column__2 fadeInOut">
       <div class="col__left">
-        <h2>{{ item.general.ourLocationH2 }}</h2>
-      </div>
-      <div class="col__right">
         <p>{{ item.general.ourLocationRichText1 | safe }}</p>
         <p>{{ item.general.ourLocationRichText2 | safe }}</p>
       </div>
+      <div class="col__right">
+        <picture>
+          <img src="/assets/nosotros/nosotros_3.jpg" alt="nosotros">
+        </picture>
+      </div>
     </div>
   </section>
-
-  <section id="section__commitment" class="fadeInOut">
-    <div class="column__1">
-      <ul role="list" class="listado__x3">
-        <li>
-          {% if item.commitment.img1 %}
-          <picture>
-            {% for format, images in item.commitment.img1 %}
-            <source
-              srcset="{{ images | srcset }}"
-              sizes="(max-width: 1200px) 100vw, 1200px"
-              type="image/{{ format }}"
-            />
-            {% endfor %}
-            <img
-              src="{{ item.img1.jpeg[0].url }}"
-              alt="{{ item.img1.altText }}"
-            />
-          </picture>
-          {% endif %}
-        </li>
-        <li>
-          <p>
-            {{ item.commitment.desc | safe }}
-          </p>
-        </li>
-        <li>
-            {% if item.commitment.img2 %}
-          <picture>
-            {% for format, images in item.commitment.img2 %}
-            <source
-              srcset="{{ images | srcset }}"
-              sizes="(max-width: 1200px) 100vw, 1200px"
-              type="image/{{ format }}"
-            />
-            {% endfor %}
-            <img
-              src="{{ item.img2.jpeg[0].url }}"
-              alt="{{ item.img2.altText }}"
-            />
-          </picture>
-          {% endif %}
-        </li>
-      </ul>
-    </div>
-  </section>
-
   <section id="section__values" class="fadeInOut">
     <div class="column__2">
         <div class="col__left">
-            <h2>{{item.values.h2}}</h2>
-            <p>{{item.values.desc}}</p>
+          <h3 class="indicador"><span>/</span>nuestros valores</h3>
+          <h2>{{item.values.h2}}</h2>
+          <p>{{item.values.desc}}</p>
         </div>
         <div class="col__right" role="list">
             <ul class="listado__x2" role="list">
                 {% for item in item.values.list %}
                 <li>
-                    <h3>{{item.h3}}</h3>
-                    <p>{{item.p}}</p>
+                  <h2>{{item.h3}}</h2>
+                  <div class="column__2">
+                    <div class="col__left">
+                      <h3>valor 1</h3>
+                    </div>
+                    <div class="col__right">
+                      <p>{{item.p}}</p>
+                    </div>
+                  </div>
+                    
                 </li>
                 {% endfor %}
             </ul>
         </div>
+    </div>
+  </section>
+  <section class="section__contact">
+    <div class="column__1">
+      <h3 class="indicador"><span>/</span>contacto</h3>
+      <h2>se parte de la experiencia <span>via</span></h2>
+    </div>
+    <div class="column__2">
+      <div class="col__left">
+        <ul class="data__wrapper">
+          <li class="telefono">
+            <h3>teléfono</h3>
+            <p>000 000 0000</p>
+          </li>
+          <li class="correo">
+            <h3>correo electrónico</h3>
+            <p>contacto@via.mx</p>
+          </li>
+          <li class="oficinas">
+            <h3>oficinas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="col__right"></div>
     </div>
   </section>
 

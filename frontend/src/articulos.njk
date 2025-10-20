@@ -18,14 +18,18 @@ permalink: "/articulos/{{pagination.pageNumber + 1}}/"
   data-js="blog"
 >
   <section id="section__hero"> 
+    <div class="column__1">
+      <h3 class="indicador"><span>/</span>inicio</h3>
+      {% for item in blog %}
+      <h1>{{item.heroH1}}</h1>
+      {% endfor %}
+    </div>
+   
   </section>
 
-  <section id="section__intro" class="splide">
-    {% for item in blog %}
-      <h1>{{item.heroH1}}</h1>
-    {% endfor %}
-    <div class="column__1 splide__track">
-        <ul role="list" class="listado__x3 width__100 splide__list">
+  <section id="section__intro">
+    <div class="column__1">
+        <ul role="list">
           {% if pagination.items|length > 0 %}
             {% for item in pagination.items %}
               {% include "post-card.njk" %}
@@ -33,28 +37,54 @@ permalink: "/articulos/{{pagination.pageNumber + 1}}/"
           {% endif %}
         </ul>
     </div>
-</section>
+  </section>
 
-<section id="section__paginacion" class="pad__lr__5 pad__bottom__5">
-  <div class="column__1">
-    <ul class="paginacion" role="list">
-      {% if pagination.href.previous %}
-      <li><a href="{{ pagination.href.previous }}">Anterior</a></li>
-      {% endif %} {% for pageNumber in pagination.pages %}
-      <li>
-        <a
-          class="{% if page.permalink == item.permalink %}active{% endif %}"
-          href="/articulos/{{ pagination.pageNumber + 1 }}/"
-          >{{ pagination.pageNumber + 1 }}</a
-        >
-      </li>
-      {% endfor %} {% if pagination.href.next %}
-      <li><a href="{{ pagination.href.next }}">Siguiente</a></li>
-      {% endif %}
-    </ul>
-  </div>
-</section>
-  
+  <section id="section__paginacion">
+    <div class="column__1">
+      <ul class="paginacion" role="list">
+        <li> <a class="anterior__arrow" href="{{ pagination.href.previous }}"></a></li>
+        {% if pagination.href.previous %}
+        <li class="pagina__anterior"><a href="{{ pagination.href.previous }}">Anterior</a></li>
+        {% endif %} {% for pageNumber in pagination.pages %}
+        <li class="paginas__numeros">
+          <a
+            class="{% if page.permalink == item.permalink %}active{% endif %}"
+            href="/articulos/{{ pagination.pageNumber + 1 }}/"
+            >{{ pagination.pageNumber + 1 }}</a
+          >
+        </li>
+        {% endfor %} {% if pagination.href.next %}
+        <li class="pagina__siguiente"><a href="{{ pagination.href.next }}">Siguiente</a></li>
+        {% endif %}
+        <li><a class="siguiente__arrow" href="{{ pagination.href.next }}"></a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="section__contact">
+    <div class="column__1">
+      <h3 class="indicador"><span>/</span>contacto</h3>
+      <h2>se parte de la experiencia <span>via</span></h2>
+    </div>
+    <div class="column__2">
+      <div class="col__left">
+        <ul class="data__wrapper">
+          <li class="telefono">
+            <h3>teléfono</h3>
+            <p>000 000 0000</p>
+          </li>
+          <li class="correo">
+            <h3>correo electrónico</h3>
+            <p>contacto@via.mx</p>
+          </li>
+          <li class="oficinas">
+            <h3>oficinas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col__right"></div>
+    </div>
+  </section>  
 </div>
 
 <script>

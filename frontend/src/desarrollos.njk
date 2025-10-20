@@ -16,18 +16,51 @@ data-barba="container"
 data-barba-namespace="productos" 
 data-css="productos" 
 data-js="productos">
-
-  <section id="section__hero" class="pad__lr__5">
-  </section>
-  
-  <section id="section__intro" class="pad__all__5">
+  <section id="section__hero">
     <div class="column__1">
-      <h2>Productos</h2>
-      <ul role="list" class="listado__x3 width__100">
+      <nav class="breadcrumb">
+        <h3>
+          <a href="/">inicio</a>
+          <span>/</span>
+          <a href="/desarrollos">desarrollos</a>
+        </h3>
+      </nav>
+      <h2>nuestros desarrollos</h2>
+    </div>
+  </section>
+  <section id="section__intro">
+    <div class="column__1">
+      <ul role="list" class="listado__x3">
         {% for item in pagination.items %}
         {% include "producto-card.njk" %}
         {% endfor %}
       </ul>
+    </div>
+  </section>
+    <section class="section__contact">
+    <div class="column__1">
+      <h3 class="indicador"><span>/</span>contacto</h3>
+      <h2>se parte de la experiencia <span>via</span></h2>
+    </div>
+    <div class="column__2">
+      <div class="col__left">
+        <ul class="data__wrapper">
+          <li class="telefono">
+            <h3>teléfono</h3>
+            <p>000 000 0000</p>
+          </li>
+          <li class="correo">
+            <h3>correo electrónico</h3>
+            <p>contacto@via.mx</p>
+          </li>
+          <li class="oficinas">
+            <h3>oficinas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="col__right"></div>
     </div>
   </section>
 

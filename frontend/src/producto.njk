@@ -17,91 +17,41 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
   data-css="producto"
   data-js="producto"
 >
-  <section id="section__hero" class="pad__lr__5 pad__top__10">
-    <div class="column__2">
-      <div class="col__left">
-        <span class="categoria_producto">
-          <a href="/desarrollos/">Desarrollos / </a>
-          <a
-            href="/desarrollos/{{ producto.categories | slugify }}"
-            >{{ producto.categories | join(", ") }}</a
-          >
-        </span>
-        <h1>{{ producto.title }}</h1>
-        <span class="categoria_producto">
-          {{ producto.hero.heroType }}
-        </span>
-      </div>
-      <div class="col__right">
-        <p>{{ producto.hero.heroIntro }}</p>
-        <a href="{{ producto.hero.heroWebLink }}" class="btn btn--right"
-          >Visitar sitio web</a
-        >
-      </div>
-    </div>
-  </section>
-
-  <section id="section__main__image">
+  <section id="section__hero">
     <div class="column__1">
+      <div class="column__2">
+        <div class="col__left">
+          <span class="categoria_producto">
+            <a href="/desarrollos/">Desarrollos / </a>
+            <a href="/desarrollos/{{ producto.categories | slugify }}">
+            {{ producto.categories | join(", ") }}</a>
+          </span>
+          <h1>{{ producto.title }}</h1>
+        </div>
+        <div class="col__right">
+          
+        </div>
+      </div>
       {% if producto.mainImage %}
-      <picture>
-        {% for format, images in producto.mainImage %}
-        <source
+        <picture>
+          {% for format, images in producto.mainImage %}
+          <source
           srcset="{{ images | srcset }}"
           sizes="(max-width: 1200px) 100vw, 1200px"
-          type="image/{{ format }}"
-        />
-        {% endfor %}
-        <img
-          src="{{ producto.mainImage.jpeg[0].url }}"
-          alt="{{ producto.mainImage.altText }}"
-        />
-      </picture>
+          type="image/{{ format }}"/>
+          {% endfor %}
+          <img src="{{ producto.mainImage.jpeg[0].url }}"
+            alt="{{ producto.mainImage.altText }}"/>
+        </picture>
       {% endif %}
-    </div>
-  </section>
-
-  <section id="home_twinImg" class="fadeInOut">
-    <div class="column__2">
-      <div class="col__left">
-        {% if producto.twinDivisor.img1 %}
-        <picture>
-          {% for format, images in producto.twinDivisor.img1 %}
-          <source
-            srcset="{{ images | srcset }}"
-            sizes="(max-width: 1200px) 100vw, 1200px"
-            type="image/{{ format }}"
-          />
-          {% endfor %}
-          <img
-            src="{{ producto.twinDivisor.img1.jpeg[0].url }}"
-            alt="{{ producto.twinDivisor.img1.altText }}"
-          />
-        </picture>
-        {% endif %}
-      </div>
-      <div class="col__right">
-        {% if producto.twinDivisor.img2 %}
-        <picture>
-          {% for format, images in producto.twinDivisor.img2 %}
-          <source
-            srcset="{{ images | srcset }}"
-            sizes="(max-width: 1200px) 100vw, 1200px"
-            type="image/{{ format }}"
-          />
-          {% endfor %}
-          <img
-            src="{{ producto.twinDivisor.img2.jpeg[0].url }}"
-            alt="{{ producto.twinDivisor.img2.altText }}"
-          />
-        </picture>
-        {% endif %}
-      </div>
     </div>
   </section>
   <section id="home_descGeneral" class="fadeInOut">
     <div class="column__2">
       <div class="col__left">
+        <h3 class="indicador">
+          <span>/ </span>descripción general
+        </h3>
         <h2>{{ producto.general.h2 }}</h2>
         <a class="btn btn--down" id="toOurMethod">Descargar Brochure |</a>
       </div>
@@ -111,77 +61,13 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
       </div>
     </div>
   </section>
-  <section id="home_divisor" class="fadeInOut">
-    <div class="column__1">
-      {% if producto.divisor %}
-      <picture>
-        {% for format, images in producto.divisor %}
-        <source
-          srcset="{{ images | srcset }}"
-          sizes="(max-width: 1200px) 100vw, 1200px"
-          type="image/{{ format }}"
-        />
-        {% endfor %}
-        <img
-          src="{{ producto.divisor.jpeg[0].url }}"
-          alt="{{ producto.divisor.altText }}"
-        />
-      </picture>
-      {% endif %}
-    </div>
-  </section>
-
-  <section id="product__location" class="fadeInOut">
-    <h2 class="width__100">Ubicación</h2>
-    <div class="column__2">
-      <div class="col__left pad__right__5">
-        <div>
-          {{ producto.location.desc | safe }}
-        </div>
-        <a
-          href="{{ producto.location.linkLocation }}"
-          target="_blank"
-          class="btn btn--right"
-          >Abrir en Google Maps</a
-        >
-      </div>
-      <div class="col__right">
-        <div
-          id="map-container-product"
-          data-map-iframe-product="{{ producto.location.map | escape }}"
-        ></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="product__amenities" class="fadeInOut">
-    <h2 class="width__100">Amenidades VIA</h2>
-    <div class="amenity__desc">{{ producto.amenities.desc | safe }}</div>
-    <div class="column__1">
-      <ul role="list">
-        {% for item in producto.amenities.list %}
-        <li class="amenities__card flex flex-col">
-          <p>
-            {{ item.name }}
-          </p>
-          <picture>
-            <img src="{{ item.img.url }}" alt="" />
-          </picture>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
-
   <section id="product__gallery">
-    <h2 class="width__100">Galería</h2>
     <div class="column__1">
       <div
         id="main-carousel"
         class="splide"
         aria-label="Splide Basic HTML Example"
-        role="group"
-      >
+        role="group">
         <div class="splide__track fadeInOut">
           <ul class="splide__list">
             {% for item in producto.gallery.list %}
@@ -201,37 +87,93 @@ permalink: "/desarrollos/{{ producto.slug.current }}/"
           </ul>
         </div>
       </div>
-
       <div
         id="thumbnail-carousel"
         class="splide"
         aria-label="Splide Basic HTML Example"
-        role="group"
-      >
+        role="group">
         <div class="splide__track">
           <ul class="splide__list">
             {% for item in producto.gallery.list %}
-            <li class="splide__slide">
-              <picture>
-                {% for format, images in item %}
-                <source
-                  srcset="{{ images | srcset }}"
-                  sizes="(max-width: 1200px) 100vw, 1200px"
-                  type="image/{{ format }}"
-                />
-                {% endfor %}
-                <img src="{{ item.jpeg[0].url }}" alt="{{ item.altText }}" />
-              </picture>
-            </li>
+            <li class="splide__slide"></li>
             {% endfor %}
           </ul>
         </div>
       </div>
     </div>
-    <a href="{{ producto.pageIntro.linkWeb }}" class="btn btn--right"
-      >Visitar sitio web</a
-    >
   </section>
+  <section id="product__amenities" class="fadeInOut">
+    <div class="column__1" id="titulo__amenidades">
+      <h3 class="indicador">
+          <span>/ </span>amenidades
+      </h3>
+      <h2 class="width__100">Amenidades en {{ producto.title }}</h2>
+    </div>
+    <div class="column__1" id="iconos__amenidades">
+      <ul role="list">
+        {% for item in producto.amenities.list %}
+        <li class="amenities__card flex flex-col">
+          <picture>
+            <img src="{{ item.img.url }}" alt="" />
+          </picture>
+          <p>
+            {{ item.name }}
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  <section id="product__location" class="fadeInOut">
+    <div class="column__2">
+      <div class="col__left">
+        <h3 class="indicador">
+          <span>/ </span>ubicación
+        </h3>
+        <h2>Ubicación</h2>
+        <div>{{ producto.location.desc | safe }}</div>
+        <a
+          href="{{ producto.location.linkLocation }}"
+          target="_blank"
+          class="btn btn--right">Abrir en Google Maps
+        </a>
+      </div>
+      <div class="col__right">
+        <div
+          id="map-container-product"
+          data-map-iframe-product="{{ producto.location.map | escape }}"
+        ></div>
+      </div>
+    </div>
+  </section>
+  <section class="section__contact">
+    <div class="column__1">
+      <h3 class="indicador"><span>/</span>contacto</h3>
+      <h2>se parte de la experiencia <span>via</span></h2>
+    </div>
+    <div class="column__2">
+      <div class="col__left">
+        <ul class="data__wrapper">
+          <li class="telefono">
+            <h3>teléfono</h3>
+            <p>000 000 0000</p>
+          </li>
+          <li class="correo">
+            <h3>correo electrónico</h3>
+            <p>contacto@via.mx</p>
+          </li>
+          <li class="oficinas">
+            <h3>oficinas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="col__right"></div>
+    </div>
+  </section>
+
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>

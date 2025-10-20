@@ -9,6 +9,9 @@ module.exports = async function() {
     title,
     slug,
     publishedAt,
+    year,
+    body,
+    colonia,
     hero{
       heroType,
       heroIntro,

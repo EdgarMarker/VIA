@@ -1,21 +1,88 @@
-#inner__header .nav__ul li:nth-child(4) a{
-    color: var(--color-accent);
+#inner__header{
+    .nav__ul{
+        border: 1px solid var(--color-secondary);
+        li{
+            a{
+                color: var(--color-secondary);
+                &:hover{
+                    color: var(--color-primary);
+                }
+            }
+            &:nth-child(2){
+                &a::before{
+                    display: none;
+                }
+            }
+        }
+        .dropdown{
+            &:after{
+                background-image: url(/assets/svg/Arrow-black-down.svg);
+            }
+            ul{
+                li{
+                    a{
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+    .cta__msn{
+        background-color: var(--color-secondary);
+        color: var(--color-white);
+        border-color: var(--color-secondary);
+    }
+    #logo__main{
+        background-image: url(/assets/svg/logo_dark.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        img{
+            opacity: 0;
+        }
+    }
 }
-
-#inner__header .nav__ul li:nth-child(4) a::before{
-    display: block;
+header{
+    background-color: var(--color-white);
 }
-
-
+.navBg{
+    background-color: rgba(255, 255, 255, 0.8);
+}
 
 #section__hero{
-    background-color: var(--color-secondary);
+    background-color: var(--color-white);
+    padding: 10% 5% 0 5%;
+    picture{
+        img{
+            aspect-ratio: 2/1;
+            border-right: 20px solid var(--color-primary);
+            object-fit: cover;
+        }
+    }
+}
+#section__body{
+    padding: 5%;
+    width: 100%;
+    .column__2{
+        gap: 10%;
+        .col__left{
+            width: 60%;
+        }
+        .col__right{
+            width: 40%;
+            ul{
+                li{
+                    list-style: none;
+                }
+            }
+        }
+    }
+    h1{
+        font-size: var(--size-2xl);
+        color: var(--color-secondary);
+    }
 }
 
-h1{
-    font-size: var(--size-2xl);
-    color: var(--color-white);
-}
+
 
 .categoria_articulo{
     font-size: var(--size-sm);

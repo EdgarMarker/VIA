@@ -80,11 +80,11 @@ header{
     background-color: var(--color-accent);
     bottom: 0;
     left: 20px;
-    display: none;
+    display: none !important;
 }
 
 #inner__header .nav__ul li a.active::before{
-    display: block;
+    display: none;
 }
 
 .cta__msn{
