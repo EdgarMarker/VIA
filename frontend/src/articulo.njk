@@ -29,7 +29,7 @@ permalink: "/articulos/{{ articulo.slug.current }}/"
   <section id="section__body" class="fadeInOut">
     <div class="column__2">
        <div class="col__left">
-        <span class="categoria_articulo">Categoría del artículo: <a href="/articulos/categorias/{{articulo.categories | slugify}}">{{ articulo.categories | join(", ") }}</a></span>
+        <span class="categoria_articulo">Blog / <a href="/articulos/categorias/{{articulo.categories | slugify}}">{{ articulo.categories | join(", ") }}</a></span>
         <div class="autor__fecha"><span>Escrito por: {{ articulo.author}}</span>
           <span>el {{ articulo.publishedAt | date("MM/dd/yy") }}</span>
         </div>
@@ -37,22 +37,59 @@ permalink: "/articulos/{{ articulo.slug.current }}/"
         {{ articulo.body | safe }}
       </div>
       <div class="col__right">
-        <h2>Categorías de artículos</h2>
-        <ul class="categorias__listado">
-          {%- for categoria in collections.categoriasBlog -%}
-          <li>
-            <a href="/articulos/categorias/{{ categoria.slug.current }}">{{ categoria.title }}</a>
-          </li>
-           {%- endfor %}
-        </ul>
-        <h2>Artículos más recientes</h2>
-        <ul class="blog__recientes">
+        <div class="categorias__art">
+          <h2>Categorías de artículos</h2>
+          <ul class="categorias__listado">
+            {%- for categoria in collections.categoriasBlog -%}
             <li>
-              <a href="/articulos/{{ item.slug.current }}">{{ item.title }}</a>
+              <a href="/articulos/categorias/{{ categoria.slug.current }}" class="{% if articulo.categories == categoria.title %}active{% endif %}">{{ categoria.title }}</a>
             </li>
-        </ul>
+            {%- endfor %}
+          </ul>
+        </div>
+        <div class="art__recientes">
+          <h2>Artículos más recientes</h2>
+          <ul class="blog__recientes">
+            <li>
+              <a>titulo del blog</a>
+            </li>
+            <li>
+              <a>titulo del blog</a>
+            </li>
+            <li>
+              <a>titulo del blog</a>
+            </li>
+          </ul>
+        </div>
+        
       </div>
     </div>
   </section>
-
+  <section class="section__contact">
+    <div class="column__1">
+      <h3 class="indicador"><span>/</span>contacto</h3>
+      <h2>se parte de la experiencia <span>via</span></h2>
+    </div>
+    <div class="column__2">
+      <div class="col__left">
+        <ul class="data__wrapper">
+          <li class="telefono">
+            <h3>teléfono</h3>
+            <p>000 000 0000</p>
+          </li>
+          <li class="correo">
+            <h3>correo electrónico</h3>
+            <p>contacto@via.mx</p>
+          </li>
+          <li class="oficinas">
+            <h3>oficinas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="col__right">
+        {% include 'form.njk' %}
+      </div>
+  </section>
 </div>

@@ -83,8 +83,6 @@ header{
                     width: 40%;
                     background-color: transparent;
                     padding: 0 30px;
-                    .btn{
-                    }
                     .card__category{
                         text-transform: uppercase;
                         margin-bottom: 30px;
@@ -193,6 +191,34 @@ header{
                     p{
                         color: var(--color-primary);
                         margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .col__right{
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                label{
+                    color: var(--color-white);
+                }
+                button{
+                    margin: 0;
+                }
+                .column__2{
+                    .col__left{
+                        label{
+                            color: var(--color-white);
+                            padding-bottom: 20px;
+                        }
+                    }
+                    .col__right{
+                        label{
+                            color: var(--color-white);
+                            padding-bottom: 20px;
+                        }
                     }
                 }
             }

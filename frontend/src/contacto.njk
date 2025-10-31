@@ -10,16 +10,40 @@ permalink: "/{{ page.fileSlug }}/"
 <div data-barba="container" data-barba-namespace="contacto" data-css="contacto" data-js="contacto">
 {% for item in contacto %}
 
-    <section id="section__hero">
+    <section class="section__hero">
         <div class="column__1">
-            <h1>{{item.heroH1}}</h1>
+            <h3 class="indicador"><span>¡</span>Queremos saber de ti!</h3>
+            <h2>{{item.heroH1}}</h2>
         </div>
-    </section>
-    <section id="section__form">
-        <div class="column__1">
-            {% include 'form.njk' %}
+        <div class="column__2">
+            <div class="col__left">
+                <ul class="data__wrapper">
+                    <li class="telefono">
+                        <h3>teléfono</h3>
+                        <p>000 000 0000</p>
+                    </li>
+                    <li class="correo">
+                        <h3>correo electrónico</h3>
+                        <p>contacto@via.mx</p>
+                    </li>
+                    <li class="oficinas">
+                        <h3>oficinas</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col__right">
+                {% include 'form.njk' %}
+            </div>
         </div>
+
     </section>
-{% endfor %}
+    <section class="section__locationmap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d150248.48822449544!2d-89.71109334605997!3d20.985856454235037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56715cab450d17%3A0x5dfc155715abeb09!2zTcOpcmlkYSwgWXVjLg!5e1!3m2!1ses-419!2smx!4v1761257768891!5m2!1ses-419!2smx"
+        width="1920" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    {% endfor %}
 </div>
 
